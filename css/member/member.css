@@ -5,7 +5,7 @@ input[type="radio"] + label:before {
   width: 24px;
   height: 24px;
   border-radius: 4px;
-  border: 1px solid #00a7b3;
+  border: 1px solid #ff7400;
   margin: 0 8px 0 0;
   box-sizing: border-box;
   vertical-align: top;
@@ -137,7 +137,7 @@ input[type="radio"] + label {
 
 .page_member_login .member_login_box button[type="submit"] {
   height: 56px;
-  background-color: #00a7b3;
+  background-color: #ff7400;
   border-radius: 8px;
   color: #fff;
   font-size: 18px;
@@ -286,8 +286,8 @@ input[type="radio"] + label {
   width: 100%;
   height: 56px;
   border-radius: 8px;
-  border: 1px solid #00a7b3;
-  color: #00a7b3;
+  border: 1px solid #ff7400;
+  color: #ff7400;
   font-size: 18px;
   font-weight: 500;
 }
