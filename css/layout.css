@@ -652,18 +652,16 @@ header nav .gnb .ctg_wrap {
 }
 header nav .gnb .ctg_wrap .depth1 {
   display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-}
-header nav .gnb .ctg_wrap .depth1 > li {
-  display: flex;
-  align-items: center;
+  column-gap: 40px;
 }
 header nav .gnb .ctg_wrap .depth1 > li > a {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 15px;
   display: inline-block;
-  width: 120px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
 }
 
 header nav .gnb .ctg_wrap .depth1 > li:hover > a {
@@ -673,7 +671,12 @@ header nav .gnb .ctg_wrap .depth1 > li:hover > a {
 
 header nav .gnb .ctg_wrap .depth2 {
   display: flex;
-  column-gap: 20px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  width: 300px;
+}
+header nav .gnb .ctg_wrap .depth2 > li {
+  width: 150px;
 }
 header nav .gnb .ctg_wrap .depth2 > li > a {
   font-size: 14px;
@@ -685,13 +688,6 @@ header nav .gnb .ctg_wrap .depth2 > li:hover > a {
 
 header nav .gnb .ctg_wrap .depth2 > li {
   display: flex;
-}
-header nav .gnb .ctg_wrap .depth2 > li:not(:last-child):after {
-  content: "";
-  margin-left: 20px;
-  width: 1px;
-  height: 12px;
-  background-color: #ccc;
 }
 
 /* 푸딩브랜드 */
