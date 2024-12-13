@@ -1,0 +1,123 @@
+.head_title_wrap {
+  position: relative;
+}
+.head_title_wrap {
+  width: 1260px;
+  margin: 0 auto;
+}
+
+.head_title_wrap .s_title {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+.head_title_wrap .b_title {
+  font-size: 32px;
+  line-height: 35px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin: 10px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.best_goods_wrap {
+  width: 1260px;
+  margin: 0 auto;
+}
+.food_category_list {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  border-bottom: 1px solid #cecece;
+  margin: 0 0 50px 0;
+}
+.food_category_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  color: #666970;
+  position: relative;
+}
+.food_category_list li.goodsActive {
+  font-weight: 700;
+  color: #ff7400;
+}
+.food_category_list li.goodsActive:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: #ff7400;
+}
+
+.best_goods_wrap .goods_list_wrap {
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  gap: 40px 24px;
+  width: 100%;
+  letter-spacing: -0.05em;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goods_list_wrap .list .img_box {
+  position: relative;
+  display: flex;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+.goods_list_wrap .list .img_box img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+}
+.goods_list_wrap .list .img_box:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.goods_list_wrap .list .info_box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.goods_list_wrap .list .css_title_box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goods_list_wrap .list .css_brand_name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #555;
+}
+
+.goods_list_wrap .list .css_prd_name {
+  font-size: 16px;
+  line-height: 21px;
+  height: 40px;
+  overflow: hidden;
+  color: #1a1a1a;
+}
+
+.crema-hide.crema-applied {
+  display: none !important;
+}

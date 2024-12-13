@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/mypage/mypage_modify.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          // 공통 함수로 fetch 로드 및 innerHTML 설정
+          function loadHTML(url, elementId) {
+            fetch(url)
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById(elementId).innerHTML = data;
+              })
+              .catch((error) => {
+                console.error(`Error loading ${url}:`, error);
+              });
+          }
+    
+          // header와 footer 로드
+          loadHTML("/header.html", "header");
+          loadHTML("/footer.html", "footer");
+        });
+      </script>
+
+
+</head>
+<body>
+    <header id="header"></header>
+    <div id = "contents">
+        <div class="mypage_wrap">
+            <div class="mypage_cont">
+            <div class="join_base_wrap">
+        <section class="profile_box join_common">
+            <div class="profile" style="margin: 0 0 30px">
+                <strong>기본 정보</strong>	
+                <dl>
+                    <dt>이름</dt>
+                    <dd>천태훈</dd>
+                </dl>
+                <dl>
+                    <dt>휴대폰번호</dt>
+                    <dd>01037689761</dd>
+                </dl>
+            </div>
+
+            <h3> 쇼핑몰 정보 </h3>
+
+            <!-- 아이디 칸 (입력x, 읽기전용으로 설정되어있음)-->
+            <strong>아이디</strong>
+            <table>
+            <tbody>
+            <tr>
+                <td>
+                    <input type="text" name="memId" value="cjsxogns@nate.com" readonly="readonly" aria-required="true" aria-invalid="false" aria-describedby="memId-error">
+                </td>
+            </tr>
+
+            <tr class = "member_password">
+                <td>
+                    <!-- 수정 필요 -->
+                    <strong> 비밀번호 </strong>
+                    <div class="btn_common_box"> 
+                        <span class="btn_gray_list"><a href="#memberNewPw" class="btn_gray_mid">
+                        <em>비밀번호 설정</em>
+                        </a> </span>
+                        <span class="btn_gray_list"><a href="#lyMemberPw" class="btn_gray_mid">
+                        <em>비밀번호 도움말</em></a></span>
+                        <span class = "button_gray_list"></span>
+                    </div>
+
+                    <!-- 비밀번호 도움말-->
+                    <div id="lyMemberPw" class="layer_area" style="display: none;">
+                        <div class="ly_wrap pw_advice_layer">
+                          <div class="ly_tit">
+                            <strong>비밀번호 도움말</strong>
+                          </div>
+                          <div class="ly_cont">
+                            <div class="pw_advice_list">
+                              <ul>
+                                <li>영문대소문자는 구분이 되며, 한가지 문자로만 입력은 위험합니다.</li>
+                                <li><strong>사용가능 특수문자 :</strong> <strong class="fc_red">!@#$%^&amp;*()-=,.+?/&lt;&gt;”’~;[]{}</strong></li>
+                                <li>ID/주민번호/생일/전화번호 등의 개인정보와 통상 사용 순서대로의 3자 이상 연속 사용은 피해주세요.
+                                <br>비밀번호는 주기적으로 바꾸어 사용하시는 것이 안전합니다.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- //ly_cont -->
+                          <a href="#lyMemberPw" class="ly_close"><img src="https://thenaum.cdn-nhncommerce.com/data/skin/front/moment/img/common/layer/btn_layer_close.png" alt="닫기"></a>
+                        </div>
+                        <!-- //ly_wrap -->
+                    </div>
+
+                    <!-- 비밀번호 설정-->
+                    <table id="memberNewPw" class="member_pw_change" style="display: table;">
+                        <tbody><tr class=" dn ">
+                          <td>
+                            <strong>현재 비밀번호</strong>
+                            <div class="member_warning">
+                              <input type="password" id="currentPassword" name="oldMemPw">
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                          <strong>새 비밀번호</strong>
+                            <div class="member_warning">
+                              <input type="password" id="newPassword" name="memPw">
+                            </div>
+                          </td>
+                         </tr>
+                         <tr>
+                          <td>
+                            <strong>새 비밀번호 확인</strong>
+                            <div class="member_warning">
+                              <input type="password" id="newPasswordCheck" name="memPwRe">
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody></table>
+                </td>
+            </tr>
+
+            <!-- 휴대폰 칸 -->
+            <tr>
+                <td class="member_address">
+                    <strong>휴대폰 번호</strong>
+                    <div class="address_postcode">
+                        <input type="text" id="cellPhone" name="cellPhone" maxlength="12" placeholder="- 없이 입력하세요." data-pattern="gdNum" value="01037689761" readonly="">
+                        <button class="btn_post_search" type="button" id="btnAuthPhone">
+                            휴대폰번호 변경
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                  <strong>이메일</strong>
+                  <div class="member_email">
+                    <div class="member_warning">
+                        <input type="text" name="email" id="email" value="cjsxogns@nate.com" placeholder="이메일" autocomplete="off" tabindex="9">
+                        <select id="emailDomain" name="emailDomain" class="chosen-select" style="display: none;">
+                          <option value="self">직접입력</option>
+                          <option value="naver.com">naver.com</option>
+                          <option value="hanmail.net">hanmail.net</option>
+                          <option value="daum.net">daum.net</option>
+                          <option value="nate.com">nate.com</option>
+                          <option value="hotmail.com">hotmail.com</option>
+                          <option value="gmail.com">gmail.com</option>
+                          <option value="icloud.com">icloud.com</option>
+                        </select>
+                            <div class="chosen-container chosen-container-single chosen-container-single-nosearch" 
+                                style="width: 500px;" title="" id="emailDomain_chosen">
+                                <a class="chosen-single">
+                                    <span>직접입력</span>
+                                    <a>
+                                        <b></b>
+                                    </a>
+                                </a>
+                                <div class="chosen-drop">
+                                    <div class="chosen-search">
+                                        <input type="text" autocomplete="off" readonly="">
+                                    </div>
+                                        <ul class="chosen-results">
+                                        </ul>
+                                </div>
+                            </div>
+                      </div>
+                    
+                      <div class="member_warning js_email"></div>
+                  </div>
+                </td>
+              </tr>
+
+
+            <!-- 주소 칸 -->
+            <td class="member_address">
+                <strong>주소</strong>
+                <div class="address_postcode">
+                    <input type="text" name="zonecode" readonly="readonly" value="">
+                    <button type="button" id="btnPostcode" class="btn_post_search">우편번호검색</button>
+                    <input type="hidden" name="zipcode" value="">
+                </div>
+                <div class="address_input">
+                    <div class="member_warning">
+                        <input type="text" name="address" readonly="readonly" value="">
+                    </div>
+                    <div class="member_warning js_address_sub">
+                        <input type="text" name="addressSub" value="">
+                    </div>
+                </div>
+            </td>
+
+
+            </tbody>
+        </table>    
+        </section>
+
+        <div class="btn_center_box">
+            <button type="button" class="btn_member_cancel">취소</button>
+            <button type="button" class="btn_comfirm js_btn_join" value="정보수정">정보수정</button>
+            <button type="button" class="btn_member_out" value="회원탈퇴"><a href="./hack_out.php" style="color:#F33; display:inline-block;">회원탈퇴</a></button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    <footer id="footer"></footer>
+</body>
+</html>

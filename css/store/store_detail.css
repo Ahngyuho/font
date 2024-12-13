@@ -1,0 +1,290 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  width: 70%;
+  min-width: 700px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store {
+  width: 83rem;
+}
+
+.reservation {
+  width: 37rem;
+}
+
+.image_box {
+  margin-bottom: 28px;
+}
+
+.image>img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+}
+
+.title_box {
+  margin-left: 10px;
+}
+
+.tit-point {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.tit-point .tit {
+  font-size: 35px;
+  color: #202020;
+  line-height: 44px;
+  font-weight: 600;
+  float: left;
+}
+
+.btxt {
+  font-size: 16px;
+  color: #7e7e7e;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  position: relative;
+  padding-right: 10px;
+}
+
+.sns-grade {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.sns-grade .grade .star {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 25px;
+  background: url(https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/Content/new-rating-on-dim-m4.png) repeat-x left;
+  background-size: 29px;
+  vertical-align: middle;
+}
+
+.sns-grade .grade .star i {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  height: 25px;
+  background: url(https://s3-ap-northeast-1.amazonaws.com/dcicons/new/images/web/Content/new-rating-on-m4.png) repeat-x left;
+  background-size: 29px;
+}
+
+.sns-grade .grade .point {
+  display: inline-block;
+  vertical-align: sub;
+  font-size: 13px;
+  color: #66666e;
+}
+
+.sns-grade .grade .point strong {
+  color: #202020;
+  font-size: 22px;
+  font-weight: 500;
+  vertical-align: sub;
+  margin: 0 6px 0 10px;
+}
+
+.sns-grade .grade .point .review_count {
+  position: relative;
+  display: inline-block;
+  color: #9e9e9e;
+  font-size: 15px;
+  font-weight: normal;
+  margin: 6px 0px 5px 0px;
+  padding-right: 12px;
+}
+
+
+/* 사이드바 */
+.stickyWrap {
+  position: sticky;
+  top: 1rem;
+  width: 100%;
+  margin: 1rem 0 0 2rem;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.side_container {
+  margin: 0 auto;
+  border: 1px solid #b6bdc7;
+  border-radius: 1.5rem;
+}
+
+.side_main {
+  padding: 2.3rem 1.7rem;
+}
+
+.line {
+  height: 1px;
+  background-color: #ccc;
+}
+
+.sideHeader {
+  box-sizing: border-box;
+}
+
+.sideCalendar {
+  padding: 1rem;
+}
+
+.side_title {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.side_title>img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.side_title>h4 {
+  font-size: 1.5rem;
+}
+
+.datepicker-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.datepicker-panel>ul:first-child {
+  width: 100%;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.arrow {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.datepicker-panel>ul>li.disabled {
+  color: #ccc;
+}
+
+.datepicker-panel>ul>li {
+  float: left;
+  margin: 0.1rem 0.3rem;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendar {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.days {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  background-color: #F6F1EC;
+  border-radius: 1rem;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.disabled {
+  cursor: default;
+}
+
+.date:nth-child(7n + 1).disabled {
+  color: #f8c4c4;
+}
+
+.date.disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.date:nth-child(7n + 1) {
+  color: #ff322e;
+}
+
+.date.picked {
+  background: #ff7400;
+  color: #fff;
+}
+
+.day,
+.date {
+  width: 2.5rem;
+  font-size: 1rem;
+  margin: 0 0.1rem;
+  height: 2.5rem;
+  cursor: pointer;
+  line-height: 2.5rem;
+  font-weight: 700;
+  border-radius: 999px;
+}
+
+.side_time {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 0.7rem;
+  padding: 1rem 0.5rem;
+}
+
+
+.time {
+  border-radius: 0.5rem;
+  border: 1px solid #ff7400;
+  display: grid;
+  place-content: center;
+  height: 2.5rem;
+  font-size: 1rem;
+  color: #ff7400;
+}
+.time.picked {
+  color: white;
+  background-color: #ff7400;
+}
+
+.side_write {
+  padding: 1rem;
+}
+
+.write_item {
+  display: flex;
+  gap: 0.4rem;
+}
