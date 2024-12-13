@@ -5,11 +5,17 @@
   border-spacing: 0;
   border-collapse: collapse;
   text-align: center;
+  border-top: 1px solid #999999;
+}
+
+.order_table_type .table_left td {
+  /* height: 31px; */
+  padding: 10px;
+  text-align: left;
 }
 
 .order_table_type th {
-  padding: 9px 10px 10px 10px;
-  border-top: 1px solid #999999;
+  padding: 15px 10px 14px 30px;
   border-bottom: 1px solid #dbdbdb;
   background: #f7f7f7;
   font-size: 14px;
@@ -24,4 +30,11 @@
   font-size: 14px;
   font-weight: 400;
   background: #ffffff;
+}
+
+.page_order_payment {
+  padding-top: 40px;
+}
+.page_order_payment > div {
+  margin-bottom: 40px;
 }
