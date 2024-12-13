@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eatzzy Stores</title>
+  <title>Store Detail</title>
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/store/store_detail.css" />
   <link rel="stylesheet" href="/css/layout.css" />
@@ -25,25 +25,70 @@
                 alt="고도식 대표 사진">
             </div>
 
-            <div class="title_box">
-              <div class="tit-point">
+            <div class="title_grade_box">
+              <div class="title_box">
                 <h1 class="tit">고도식</h1>
-              </div>
-              <div class="btxt">
-                <span class="subtitle">서울 동작구 | 고깃집</span>
-              </div>
+                <span class="subtitle">서울 송파구 | 고깃집</span>
 
-              <div class="sns-grade">
-                <p class="grade">
-                  <span id="lbl_review_star" class="star">
-                    <i style="width:97.5%"></i>
-                  </span>
-                  <span class="point">
-                    <strong id="lbl_review_point">4.7</strong>
-                    <span class="review_count">(53명의 평가)</span>
-                  </span>
-                </p>
+                <div class="grade">
+                  <img src="/icons/star_fill.svg" alt="star" />
+                  <div class="point">
+                    <span class="review_point">4.7</span>
+                    <span class="review_count">(리뷰 53개)</span>
+                  </div>
+                </div>
+
+
               </div>
+            </div>
+
+            <div class="info_box">
+              <ul>
+                <li class="info_list">
+                  <img src="/icons/map.svg" alt="장소">
+                  <span>서울특별시 송파구 백제고분로45길 28</span>
+                </li>
+                <li class="info_list">
+                  <img src="/icons/call.svg" alt="전화번호">
+                  <span>02-422-8692</span>
+                </li>
+                <li class="info_list">
+                  <img src="/icons/clock.svg" alt="영업시간">
+
+                  <span>11:00 ~ 21:00</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="menu_box">
+              <h1>메뉴판</h1>
+              <ul>
+                <li class="menu_list">
+                  <p>삼겹살 160g</p>
+                  <div class="menu_dots"></div>
+                  <p>17,000원</p>
+                </li>
+                <li class="menu_list">
+                  <p>메밀냉면(물)</p>
+                  <div class="menu_dots"></div>
+                  <p>7,000원</p>
+                </li>
+                <li class="menu_list">
+                  <p>메밀냉면(비빔)</p>
+                  <div class="menu_dots"></div>
+                  <p>8,000원</p>
+                </li>
+                <li class="menu_list">
+                  <p>얼큰 순두부찌개</p>
+                  <div class="menu_dots"></div>
+                  <p>7,000원</p>
+                </li>
+                <li class="menu_list">
+                  <p>차돌 된장찌개</p>
+                  <div class="menu_dots"></div>
+                  <p>8,000원</p>
+                </li>
+              </ul>
             </div>
 
           </div>
@@ -57,7 +102,7 @@
                   <img src="/icons/calendar.svg" alt="">
                   <h4>날짜를 선택해주세요</h4>
                 </div>
-                <div class="sideCalendar">
+                <div class="side_calendar">
 
 
                   <div class="datepicker-panel">
@@ -141,12 +186,32 @@
                   <div class="write_item">
                     <p>이름</p>
                     <div class="input_name">
-                      <input type="text">
+                      <input type="text" id="name" placeholder="이름을 입력해주세요.">
+                    </div>
+                  </div>
+                  <div class="write_item">
+                    <p>인원수</p>
+                    <div class="headcount">
+                      <button>-</button>
+                      <div class="input_headcount">
+                        <input type="number" id="headcount" min="1" max="20" value=1 />
+                      </div>
+                      <button>+</button>
+                    </div>
+                  </div>
+                  <div class="write_item">
+                    <p>요청사항</p>
+                    <div class="input_request">
+                      <textarea name="request" id="request" placeholder="요청사항을 적어주세요.">
+                    </textarea>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <a href="stores.html" class="side_button">
+              예약하기
+            </a>
           </div>
         </div>
       </div>
