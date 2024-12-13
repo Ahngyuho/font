@@ -309,7 +309,9 @@ input[type="radio"] + label {
   clear: both;
   content: "";
 }
-
+.page_member_join {
+  margin-bottom: 50px;
+}
 .page_member_join .content_wrap {
   width: 750px;
   margin: 0 auto;
