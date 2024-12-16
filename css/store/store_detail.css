@@ -64,7 +64,7 @@
   margin-top: 1rem;
 }
 
-.grade > img {
+.grade>img {
   width: 1.8rem;
   height: 1.8rem;
 }
@@ -415,6 +415,47 @@
   color: #1a1a1a;
 }
 
+/* 목록 선택 */
+.submenu_list {
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+}
+
+.submenu_item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submenu_item:active,
+.submenu_item:hover {
+  color: #ff7400;
+  border-bottom: 1px solid #ff7400;
+}
+
+
+/* 매장 소개 */
+.intro_box {
+  padding: 1rem 2rem;
+}
+
+.intro_item {
+  margin-bottom: 2rem;
+}
+
+.intro_item > h2 {
+  margin-bottom: 0.5rem;
+}
+
+
 /* 메뉴 리스트 */
 
 .menu_box {
@@ -424,12 +465,12 @@
   padding: 2rem;
 }
 
-.menu_box>h1 {
+.menu_box>h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.menu_box > ul {
+.menu_box>ul {
   padding: 0.5rem;
 }
 
