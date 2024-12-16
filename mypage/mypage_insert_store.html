@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/mypage/mypage_insert_store.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          // 공통 함수로 fetch 로드 및 innerHTML 설정
+          function loadHTML(url, elementId) {
+            fetch(url)
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById(elementId).innerHTML = data;
+              })
+              .catch((error) => {
+                console.error(`Error loading ${url}:`, error);
+              });
+          }
+    
+          // header와 footer 로드
+          loadHTML("/header.html", "header");
+          loadHTML("/footer.html", "footer");
+        });
+      </script>
+
+
+</head>
+<body>
+    <header id="header"></header>
+    <main>
+        <section class="insert_store_box">
+        <form id="restaurantForm" action="#" method="POST" enctype="multipart/form-data">
+            <fieldset style="margin: 80px 0 30px">
+                <div><label class="insert_store_info">식당 정보 입력</label></div>
+
+                <!-- 대표 사진 (최대 4개) -->
+                <div class="form-group">
+                    <label for="restaurantImages"><strong>대표 사진 (최대 4개)</strong></label>
+                    <input type="file" class="store_image" name="restaurantImages" accept="image/*" multiple>
+                    <p>최대 4개의 이미지를 선택할 수 있습니다.</p>
+                </div>
+
+                <!-- 식당 이름 (최대 30자) -->
+                <div class="form-group">
+                    <label for="restaurantName"><strong>식당 이름</strong></label>
+                    <input type="text" id="restaurantName" name="restaurantName" placeholder="최대 30자 입력 가능" maxlength="30" required>
+                </div>
+
+                <!-- 소개 (최대 200자) -->
+                <div class="form-group">
+                    <label for="restaurantDescription"><strong>식당 소개</strong></label>
+                    <textarea id="restaurantDescription" name="restaurantDescription" placeholder="최대 200자 입력 가능" maxlength="200" rows="4" required></textarea>
+                </div>
+
+                <!-- 주소 -->
+                <div class="form-group">
+                    <label for="restaurantAddress"><strong>주소</strong></label>
+                    <input type="text" id="restaurantAddress" name="restaurantAddress" required>
+                </div>
+
+                <!-- 전화번호 -->
+                <div class="form-group">
+                    <label for="restaurantPhone"><strong>전화번호</strong></label>
+                    <input type="tel" id="restaurantPhone" name="restaurantPhone" required>
+                </div>
+
+                <!-- 영업시간 -->
+                <div class="form-group">
+                    <label for="businessHours"><strong>영업시간</strong></label>
+                    <input type="text" id="businessHours" name="businessHours" placeholder="예: 10:00 - 22:00" required>
+                </div>
+
+                <!-- 예약 가능 시간 (요일, 시간 입력 가능) -->
+                <div class="form-group">
+                    <label for="reservationHours"><strong>예약 가능 시간</strong></label>
+                    <input type="text" id="reservationHours" name="reservationHours" placeholder="예: 월요일 10:00 - 22:00" required>
+                    <p>요일과 시간을 입력해 주세요.</p>
+                </div>
+
+                <!-- 카테고리 -->
+                <div class="form-group">
+                    <label for="restaurantCategory"><strong>카테고리</strong></label>
+                    <select id="restaurantCategory" name="restaurantCategory" required>
+                        <option value="" disabled selected>카테고리 선택</option>
+                        <option value="한식">한식</option>
+                        <option value="중식">중식</option>
+                        <option value="양식">양식</option>
+                        <option value="일식">일식</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+
+                <!-- 제출 버튼 -->
+                <div class="button_group">
+                    <button type="button" class="cancel_store">취소</button>
+                    <button type="button" class="submit_store">식당 등록</button>
+                </div>
+            </fieldset>
+        </form>
+        </section>
+    </main>
+
+    <footer id="footer"></footer>
+</body>
+</html>

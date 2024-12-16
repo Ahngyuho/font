@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/mypage/mypage_modify.css" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+          // 공통 함수로 fetch 로드 및 innerHTML 설정
+          function loadHTML(url, elementId) {
+            fetch(url)
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById(elementId).innerHTML = data;
+              })
+              .catch((error) => {
+                console.error(`Error loading ${url}:`, error);
+              });
+          }
+    
+          // header와 footer 로드
+          loadHTML("/header.html", "header");
+          loadHTML("/footer.html", "footer");
+        });
+      </script>
+
+
+</head>
+<body>
+    <header id="header"></header>
+    
+    
+    <footer id="footer"></footer>
+</body>
+</html>

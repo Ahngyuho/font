@@ -31,13 +31,14 @@
 </head>
 <body>
     <header id="header"></header>
-    <div id = "contents">
+    <div id="wrap">
+    <div id="contents">
         <div class="mypage_wrap">
             <div class="mypage_cont">
             <div class="join_base_wrap">
         <section class="profile_box join_common">
-            <div class="profile" style="margin: 0 0 30px">
-                <strong>기본 정보</strong>	
+            <div class="profile" style="margin: 80px 0 30px">
+                <strong>기본 정보</strong>   
                 <dl>
                     <dt>이름</dt>
                     <dd>천태훈</dd>
@@ -139,43 +140,27 @@
             </tr>
 
             <tr>
-                <td>
+              <td>
                   <strong>이메일</strong>
                   <div class="member_email">
-                    <div class="member_warning">
-                        <input type="text" name="email" id="email" value="cjsxogns@nate.com" placeholder="이메일" autocomplete="off" tabindex="9">
-                        <select id="emailDomain" name="emailDomain" class="chosen-select" style="display: none;">
-                          <option value="self">직접입력</option>
-                          <option value="naver.com">naver.com</option>
-                          <option value="hanmail.net">hanmail.net</option>
-                          <option value="daum.net">daum.net</option>
-                          <option value="nate.com">nate.com</option>
-                          <option value="hotmail.com">hotmail.com</option>
-                          <option value="gmail.com">gmail.com</option>
-                          <option value="icloud.com">icloud.com</option>
-                        </select>
-                            <div class="chosen-container chosen-container-single chosen-container-single-nosearch" 
-                                style="width: 500px;" title="" id="emailDomain_chosen">
-                                <a class="chosen-single">
-                                    <span>직접입력</span>
-                                    <a>
-                                        <b></b>
-                                    </a>
-                                </a>
-                                <div class="chosen-drop">
-                                    <div class="chosen-search">
-                                        <input type="text" autocomplete="off" readonly="">
-                                    </div>
-                                        <ul class="chosen-results">
-                                        </ul>
-                                </div>
-                            </div>
+                      <div class="member_warning">
+                          <input type="text" name="email" id="email" placeholder="이메일 입력" autocomplete="off" tabindex="9">
+                          <select id="emailDomain" name="emailDomain" class="chosen-select">
+                              <option value="self">직접입력</option>
+                              <option value="naver.com">naver.com</option>
+                              <option value="hanmail.net">hanmail.net</option>
+                              <option value="daum.net">daum.net</option>
+                              <option value="nate.com">nate.com</option>
+                              <option value="hotmail.com">hotmail.com</option>
+                              <option value="gmail.com">gmail.com</option>
+                              <option value="icloud.com">icloud.com</option>
+                          </select>
                       </div>
-                    
-                      <div class="member_warning js_email"></div>
+                      <div class="member_warning js_email">이메일을 올바르게 입력해주세요.</div>
                   </div>
-                </td>
-              </tr>
+              </td>
+          </tr>
+          
 
 
             <!-- 주소 칸 -->
@@ -204,9 +189,10 @@
         <div class="btn_center_box">
             <button type="button" class="btn_member_cancel">취소</button>
             <button type="button" class="btn_comfirm js_btn_join" value="정보수정">정보수정</button>
-            <button type="button" class="btn_member_out" value="회원탈퇴"><a href="./hack_out.php" style="color:#F33; display:inline-block;">회원탈퇴</a></button>
+            <button type="button" class="btn_member_out" value="회원탈퇴"><a href="" style="color:#F33; display:inline-block;">회원탈퇴</a></button>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>
