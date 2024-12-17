@@ -2,25 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
 }
 
 .main {
-  width: 70%;
+  width: 100%;
+  max-width: 900px;
   margin: 3rem 0;
   display: flex;
   justify-content: space-between;
-  height: auto;
-}
-
-.store {
-  flex-grow: 3;
-}
-
-.reservation {
-  flex-grow: 1;
-  height: auto;
-  position: relative;
 }
 
 .image_box {
@@ -89,12 +78,13 @@
 
 /* 사이드바 */
 .stickyWrap {
-  max-width: 330px;
-  margin: 0 2rem 0 3rem;
+  width: 20rem;
+  margin-left: 3rem;
   z-index: 10;
   display: flex;
   flex-direction: column;
-  float: right;
+  position: sticky;
+  top: 1rem;
 }
 
 .side_container {
@@ -224,6 +214,10 @@
   color: #fff;
 }
 
+.date:hover {
+  background-color: #F6F1EC;
+}
+
 .day,
 .date {
   font-size: 0.8rem;
@@ -254,7 +248,12 @@
   color: #ff7400;
 }
 
-.time.picked {
+.side_time > .time:hover {
+  background-color: #F6F1EC;
+}
+
+
+.side_time > .time.picked {
   color: white;
   background-color: #ff7400;
 }
@@ -444,7 +443,7 @@
 
 /* 매장 소개 */
 .intro_box {
-  padding: 1rem 2rem;
+  padding: 1.5rem;
 }
 
 .intro_item {
@@ -452,8 +451,10 @@
 }
 
 .intro_item > h2 {
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
+
 
 
 /* 메뉴 리스트 */
@@ -490,3 +491,60 @@
   margin: auto 1rem;
   border-top: 1px dashed #ccc;
 }
+
+/* 리뷰  */
+.review_header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  padding: 1.5rem 0;
+}
+
+.review_header > img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.review_header > div  > p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 리뷰 아이템 */
+.review_item{
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #d8dde5;
+}
+
+.star_box {
+  display: flex;
+  margin: 0 0 0.2rem -0.2rem;
+}
+
+.review_user {
+  color: #7e7e7e;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.review_user > #userName::after {
+  content: "•";
+  margin-left: 0.3rem;
+  color: #ccc;
+}
+
+.review_image_box {
+  width: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.review_image_box > img {
+  width: 10rem;
+  border-radius: 1rem;
+}
+
