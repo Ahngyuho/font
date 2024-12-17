@@ -61,16 +61,135 @@
 
 
           </div>
-          <div>
-            <ul class="submenu_list">
-              <li class="submenu_item">소개</li>
-              <li class="submenu_item">메뉴</li>
-              <li class="submenu_item">리뷰</li>
-              <li class="submenu_item">밀키트
-            </ul>
+
+          <div class="mobile_reservation">
+            <div>
+              <div class="side_main">
+                <div class="side_title">
+                  <img src="/icons/calendar.svg" alt="">
+                  <h4>날짜를 선택해주세요</h4>
+                </div>
+                <div class="side_calendar">
+                  <div class="datepicker-panel">
+                    <ul>
+                      <li data-view="month prev" class="arrow disabled">
+                        <img src="/icons/angle_left.svg" alt="prev" />
+                      </li>
+                      <li data-view="month current">2024. 12</li>
+                      <li data-view="month next" class="arrow">
+                        <img src="/icons/angle_right.svg" alt="next">
+                      </li>
+                    </ul>
+                    <div class="calendar">
+                      <div class="days">
+                        <div class="day">일</div>
+                        <div class="day">월</div>
+                        <div class="day">화</div>
+                        <div class="day">수</div>
+                        <div class="day">목</div>
+                        <div class="day">금</div>
+                        <div class="day">토</div>
+                      </div>
+                      <div class="dates">
+                        <div class="date disabled">1</div>
+                        <div class="date disabled">2</div>
+                        <div class="date disabled">3</div>
+                        <div class="date disabled">4</div>
+                        <div class="date disabled">5</div>
+                        <div class="date disabled">6</div>
+                        <div class="date disabled">7</div>
+                        <div class="date disabled">8</div>
+                        <div class="date disabled">9</div>
+                        <div class="date disabled">10</div>
+                        <div class="date disabled">11</div>
+                        <div class="date disabled">12</div>
+                        <div class="date picked">13</div>
+                        <div class="date">14</div>
+                        <div class="date">15</div>
+                        <div class="date">16</div>
+                        <div class="date">17</div>
+                        <div class="date">18</div>
+                        <div class="date">19</div>
+                        <div class="date">20</div>
+                        <div class="date">21</div>
+                        <div class="date">22</div>
+                        <div class="date">23</div>
+                        <div class="date">24</div>
+                        <div class="date">25</div>
+                        <div class="date">26</div>
+                        <div class="date">27</div>
+                        <div class="date">28</div>
+                        <div class="date">29</div>
+                        <div class="date">30</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="side_main">
+                <div class="side_title">
+                  <img src="/icons/clock.svg" alt="">
+                  <h4>시간을 선택해주세요</h4>
+                </div>
+                <div class="side_time">
+                  <buton class="time picked">17 : 00</buton>
+                  <button class="time">17 : 30</button>
+                  <button class="time">18 : 00</button>
+                  <button class="time">18 : 30</button>
+                  <button class="time">19 : 00</button>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="side_main">
+                <div class="side_title">
+                  <img src="/icons/write.svg" alt="">
+                  <h4>정보를 입력해주세요</h4>
+                </div>
+                <div class="side_write">
+                  <div class="write_item">
+                    <p>이름</p>
+                    <div class="input_name">
+                      <input type="text" id="name" placeholder="이름을 입력해주세요.">
+                    </div>
+                  </div>
+                  <div class="write_item">
+                    <p>인원수</p>
+                    <div class="headcount">
+                      <button>-</button>
+                      <div class="input_headcount">
+                        <input type="number" id="headcount" min="1" max="20" value=1 />
+                      </div>
+                      <button>+</button>
+                    </div>
+                  </div>
+                  <div class="write_item">
+                    <p>요청사항</p>
+                    <div class="input_request">
+                      <textarea name="request" id="request" placeholder="요청사항을 적어주세요.">
+                                            </textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="stores.html" class="side_button">
+              예약하기
+            </a>
           </div>
-          <!-- 
-          <div class="intro_box">
+
+
+          <ul class="submenu_list">
+            <li class="submenu_item" data-target="intro_box">소개</li>
+            <li class="submenu_item" data-target="menu_box">메뉴</li>
+            <li class="submenu_item" data-target="review_box">리뷰</li>
+            <li class="submenu_item">밀키트
+          </ul>
+
+
+          <div id="intro_box" class="content_box">
             <div class="intro_item">
               <h2>매장 소개</h2>
               <p>"돼지고기 등심과 가브리살, 삼겹살을 한 번에 맛볼 수 있는 '알등심' 전문점 [고도식] 잠실점입니다.
@@ -88,7 +207,7 @@
               <p>매장 내 주차공간이 없어 인근 민영 주차장을 이용 부탁드립니다.</p>
             </div>
           </div>
-          <div class="menu_box">
+          <div id="menu_box" class="content_box">
             <h2>메뉴판</h2>
             <ul>
               <li class="menu_list">
@@ -117,9 +236,9 @@
                 <p>8,000원</p>
               </li>
             </ul>
-          </div> -->
+          </div>
 
-          <div class="review_box">
+          <div id="review_box" class="content_box">
             <div class="review_header">
               <img src="/icons/star_fill.svg" alt="star">
               <div>
@@ -231,7 +350,7 @@
               </li>
             </ul>
           </div>
-          
+
         </section>
         <aside class="reservation">
           <div class="stickyWrap">
@@ -356,6 +475,8 @@
   </div>
   <footer id="footer"></footer>
   </div>
+
+  <script src="/js/store_detail.js"></script>
 </body>
 
 </html>
