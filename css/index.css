@@ -1,52 +1,53 @@
 section {
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 section:not(:last-child) {
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
 }
 
 .head_title_wrap {
   position: relative;
-  width: 1260px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .head_title_wrap .s_title {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   letter-spacing: -0.02em;
   font-weight: 400;
 }
+
 .head_title_wrap .b_title {
-  font-size: 32px;
-  line-height: 35px;
+  font-size: 2rem;
+  line-height: 2.1875rem;
   letter-spacing: -0.02em;
   font-weight: 600;
-  margin: 10px 0 30px 0;
+  margin: 0.625rem 0 1.875rem 0;
   display: flex;
   justify-content: space-between;
 }
 
 .visual {
   background: url(/icons/main_img.jpeg) no-repeat center 60%;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 1.25rem 1.25rem;
   color: #fff;
   box-sizing: border-box;
   background-size: cover;
-  height: 200px;
+  height: 12.5rem;
 }
 
 .best_goods_wrap {
-  width: 1260px;
+  width: 100%;
   margin: 0 auto;
 }
 .food_category_list {
   width: 100%;
-  height: 56px;
+  height: 3.5rem;
   display: flex;
-  border-bottom: 1px solid #cecece;
-  margin: 0 0 50px 0;
+  border-bottom: 0.0625rem solid #cecece;
+  margin: 0 0 3.125rem 0;
 }
 .food_category_list li {
   display: flex;
@@ -54,7 +55,7 @@ section:not(:last-child) {
   align-items: center;
   flex: 1;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: -0.05em;
   color: #666970;
@@ -67,9 +68,9 @@ section:not(:last-child) {
 .food_category_list li.goodsActive:after {
   content: "";
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   position: absolute;
-  bottom: -1px;
+  bottom: -0.0625rem;
   left: 0;
   background: #ff7400;
 }
@@ -77,11 +78,11 @@ section:not(:last-child) {
 .best_goods_wrap .goods_list_wrap {
   grid-template-columns: repeat(6, 1fr);
   display: grid;
-  gap: 40px 24px;
+  gap: 2.5rem 1.5rem;
   width: 100%;
   letter-spacing: -0.05em;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   width: 100%;
 }
 
@@ -89,13 +90,13 @@ section:not(:last-child) {
   letter-spacing: -0.05em;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .goods_list_wrap .list .img_box {
   position: relative;
   display: flex;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   overflow: hidden;
   width: 100%;
 }
@@ -115,27 +116,27 @@ section:not(:last-child) {
 .goods_list_wrap .list .info_box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 0 4px;
+  gap: 0.5rem;
+  padding: 0 0.25rem;
 }
 
 .goods_list_wrap .list .css_title_box {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .goods_list_wrap .list .css_brand_name {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 0.75rem;
   color: #555;
 }
 
 .goods_list_wrap .list .css_prd_name {
-  font-size: 16px;
-  line-height: 21px;
-  height: 40px;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  height: 2.5rem;
   overflow: hidden;
   color: #1a1a1a;
 }
@@ -145,25 +146,25 @@ section:not(:last-child) {
 }
 
 .crema-show {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-family: "Open Sans", "Noto Sans KR", sans-serif;
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: 0.125rem;
   letter-spacing: -0.01em;
 }
 
 .crema-show:before {
   content: "";
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/star_fill.svg)
     no-repeat;
   background-size: contain;
 }
 .crema-product-reviews-score {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   color: #1a1a1a;
 }
@@ -190,12 +191,12 @@ section:not(:last-child) {
 .goods_list_wrap .list .css_final {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.25rem;
 }
 
 .goods_list_wrap .list .css_final > div {
   display: flex;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .goods_list_wrap .list .css_purchase {
@@ -204,13 +205,13 @@ section:not(:last-child) {
 }
 
 .goods_list_wrap .list .css_purchase span {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 150%;
 }
 
 .goods_list_wrap .list .css_purchase em {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 170%;
   font-style: normal;
@@ -218,14 +219,14 @@ section:not(:last-child) {
 
 .list_basket_cart {
   right: 0;
-  bottom: 5px;
+  bottom: 0.3125rem;
   position: relative;
   background: #ff7744;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   box-shadow: none;
   margin: 0;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,8 +236,8 @@ section:not(:last-child) {
 .list_basket_cart:before {
   content: "";
   display: block;
-  width: 26.4px;
-  height: 26.4px;
+  width: 1.65rem;
+  height: 1.65rem;
   background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/ncart.svg)
     no-repeat;
 }
