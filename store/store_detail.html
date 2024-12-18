@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/store/store_detail.css" />
   <link rel="stylesheet" href="/css/layout.css" />
   <script src="/js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -185,10 +186,10 @@
             <li class="submenu_item" data-target="intro_box">소개</li>
             <li class="submenu_item" data-target="menu_box">메뉴</li>
             <li class="submenu_item" data-target="review_box">리뷰</li>
-            <li class="submenu_item">밀키트
+            <li class="submenu_item">밀키트</li>
           </ul>
 
-
+          
           <div id="intro_box" class="content_box">
             <div class="intro_item">
               <h2>매장 소개</h2>
@@ -237,7 +238,6 @@
               </li>
             </ul>
           </div>
-
           <div id="review_box" class="content_box">
             <div class="review_header">
               <img src="/icons/star_fill.svg" alt="star">
@@ -477,6 +477,16 @@
   </div>
 
   <script src="/js/store_detail.js"></script>
+  <script>
+    const getStoreDetail = async () => {
+      await axios.get('https://8ef7abb4-a56b-4eb1-a6f8-ea0868b3e6fc.mock.pstmn.io/stores/2')
+        .then((res) => {
+          console.log(res.data);
+          return res.data;
+        })
+    }
+    getStoreDetail();
+  </script>
 </body>
 
 </html>
