@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script src="/js/layout.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            display: flex;
+            padding: 0 !important;
+            position: relative;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            min-height: 70vh;
+            line-height: 1.6;
+        }
+
+        .like_stores {
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #cecece;
+            width: 100%;
+        }
+
+        .list {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            width: 80%;
+            height: 30%;
+            margin-left: 5%;
+            margin-top: 3%;
+            background-color: #faf6f6;
+            border-radius: 4px;
+        }
+
+        .list:last-child {
+            border-bottom: none;
+        }
+
+        .list .img_box {
+            flex-shrink: 0;
+            border-radius: 8px;
+            width: 15%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .list .img_box img {
+            width: 100%;
+            /* 이미지가 박스를 완전히 채우도록 */
+            height: 100%;
+            /* 박스 크기에 맞추어 조정 */
+            object-fit: cover;
+            /* 이미지 비율 유지하며 박스 채우기 */
+
+        }
+
+        .list .info_box {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: 90%;
+            /* 세로 정렬 */
+            gap: 5px;
+            /* 자식 요소 간 간격 */
+        }
+
+
+        .list .info_box .store_name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            flex: 3;
+            /* 진한 텍스트 색상 */
+        }
+
+        /* subtitle 스타일 */
+        .list .info_box .subtitle {
+            font-size: 14px;
+            color: #666;
+            flex: 2;
+            /* 연한 텍스트 색상 */
+        }
+
+        .list .info_box .review_and_category {
+            display: flex;
+            flex: 2;
+        }
+
+        /* review_box 스타일 */
+        .list .info_box .review_and_category .review_box {
+            display: flex;
+            gap: 5px;
+        }
+
+        /* review_box 아이콘 스타일 */
+        .list .info_box .review_and_category .review_box .icon {
+            width: 16px;
+            /* 아이콘 가로 크기 */
+            height: 16px;
+            /* 아이콘 세로 크기 */
+        }
+
+        /* review_content_box 스타일 */
+        .list .info_box .review_and_category .review_box .review_content_box span:first-child {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .list .info_box .review_and_category .review_box .review_content_box .subtitle {
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header"></header>
+
+
+    <div class="content">
+        <client_sidebar id="client_sidebar"></client_sidebar>
+        <div class="like_stores">
+            <div class="list">
+                <a href="/store/store_detail.html" target="_blank" class="img_box">
+                    <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+                </a>
+                <div class="info_box">
+                    <div class="store_name">장뜰떡볶이</div>
+                    <div class="review_and_category">
+                        <div class="review_box">
+                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                            <div class="review_content_box">
+                                <span>4.9</span>
+                                <span class="subtitle">(38)</span>
+                            </div>
+                        </div>
+                        <div class="subtitle">떡볶이</div>
+                    </div>
+                    <div class="subtitle">서울 동작구</div>
+                </div>
+            </div>
+
+            <div class="list">
+                <a href="/store/store_detail.html" target="_blank" class="img_box">
+                    <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+                </a>
+                <div class="info_box">
+                    <div class="store_name">장뜰떡볶이</div>
+                    <div class="review_and_category">
+                        <div class="review_box">
+                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                            <div class="review_content_box">
+                                <span>4.9</span>
+                                <span class="subtitle">(38)</span>
+                            </div>
+                        </div>
+                        <div class="subtitle">떡볶이</div>
+                    </div>
+                    <div class="subtitle">서울 동작구</div>
+                </div>
+            </div>
+
+            <div class="list">
+                <a href="/store/store_detail.html" target="_blank" class="img_box">
+                    <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+                </a>
+                <div class="info_box">
+                    <div class="store_name">장뜰떡볶이</div>
+                    <div class="review_and_category">
+                        <div class="review_box">
+                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                            <div class="review_content_box">
+                                <span>4.9</span>
+                                <span class="subtitle">(38)</span>
+                            </div>
+                        </div>
+                        <div class="subtitle">떡볶이</div>
+                    </div>
+                    <div class="subtitle">서울 동작구</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <footer id="footer"></footer>
+</body>
+
+</html>
