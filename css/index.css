@@ -1,7 +1,13 @@
+section {
+  padding: 60px 0;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
 .head_title_wrap {
   position: relative;
-}
-.head_title_wrap {
   width: 1260px;
   margin: 0 auto;
 }
@@ -20,6 +26,15 @@
   margin: 10px 0 30px 0;
   display: flex;
   justify-content: space-between;
+}
+
+.visual {
+  background: url(/icons/main_img.jpeg) no-repeat center 60%;
+  border-radius: 0 0 20px 20px;
+  color: #fff;
+  box-sizing: border-box;
+  background-size: cover;
+  height: 200px;
 }
 
 .best_goods_wrap {
@@ -64,6 +79,13 @@
   display: grid;
   gap: 40px 24px;
   width: 100%;
+  letter-spacing: -0.05em;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.goods_list_wrap .list {
   letter-spacing: -0.05em;
   display: flex;
   flex-direction: column;
@@ -120,4 +142,101 @@
 
 .crema-hide.crema-applied {
   display: none !important;
+}
+
+.crema-show {
+  font-size: 12px;
+  font-family: "Open Sans", "Noto Sans KR", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  letter-spacing: -0.01em;
+}
+
+.crema-show:before {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/star_fill.svg)
+    no-repeat;
+  background-size: contain;
+}
+.crema-product-reviews-score {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.crema_product_reviews_score__container {
+  display: inline-block;
+  font-family: inherit;
+}
+
+.crema-product-reviews-count {
+  color: #595959;
+}
+
+.item_money_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods_list_wrap .list .css_final {
+  justify-content: space-between;
+  position: relative;
+}
+
+.goods_list_wrap .list .css_final {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.goods_list_wrap .list .css_final > div {
+  display: flex;
+  gap: 10px;
+}
+
+.goods_list_wrap .list .css_purchase {
+  display: flex;
+  align-items: center;
+}
+
+.goods_list_wrap .list .css_purchase span {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.goods_list_wrap .list .css_purchase em {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 170%;
+  font-style: normal;
+}
+
+.list_basket_cart {
+  right: 0;
+  bottom: 5px;
+  position: relative;
+  background: #ff7744;
+  border-radius: 2px;
+  box-shadow: none;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.list_basket_cart:before {
+  content: "";
+  display: block;
+  width: 26.4px;
+  height: 26.4px;
+  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/ncart.svg)
+    no-repeat;
 }

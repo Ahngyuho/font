@@ -413,24 +413,20 @@ header .top_login {
 header .search_area {
   height: 72px;
   padding: 12px 0 0 0;
+  display: flex;
 }
 
 header .search_area .logo {
-  float: left;
   display: block;
   background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_fd_logo.gif)
     no-repeat 0 0;
   font-size: 0;
+  margin-right: 100px;
 }
 header .search_area .logo a {
   display: inline-block;
   width: 164px;
   height: 42px;
-}
-
-header .search_area .header_search {
-  float: left;
-  margin: 0 0 0 46px;
 }
 
 header .search_area .search {
@@ -440,7 +436,7 @@ header .search_area .search .search_box {
   display: flex;
   gap: 4px;
   align-items: center;
-  width: 420px;
+  width: 480px;
   height: 42px;
   border: 2px solid #ff7400;
   box-sizing: border-box;
@@ -491,8 +487,8 @@ header .search_area .search .btn_top_search_close {
 }
 
 header .search_area .util_menu {
-  float: right;
   height: 29px;
+  margin-left: auto;
 }
 header .search_area .util_menu > ul {
   display: inline-block;
@@ -541,59 +537,6 @@ header .search_area .util_menu .cart_btn a .num {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-header .nav_wrap {
-  display: inline-flex;
-  column-gap: 50px;
-  height: 42px;
-  align-items: center;
-  font-size: 16px;
-  margin-left: 50px;
-}
-header .nav_wrap > li {
-  position: relative;
-  height: 42px;
-  display: flex;
-  align-items: center;
-}
-
-header .nav_wrap > li:hover > ul,
-header .nav_wrap > li > ul:hover {
-  display: block;
-}
-header .nav_wrap > li > ul {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  border: 2px solid #ff7400;
-  box-sizing: border-box;
-  background: #fff;
-  z-index: 900;
-  padding: 11px 0 6px;
-  min-width: 100%;
-}
-
-header .nav_wrap > li > ul > li > a {
-  height: 32px;
-  line-height: 32px;
-  cursor: pointer;
-  padding: 0 40px 0 20px;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: -0.025em;
-  color: #333;
-  box-sizing: border-box;
-  word-break: keep-all;
-}
-
-header .nav_wrap > li > ul > li:hover {
-  background: #ff7400;
-}
-
-header .nav_wrap > li > ul > li:hover a {
-  color: #fff;
 }
 
 header nav {
@@ -675,30 +618,6 @@ header nav .l_nav_wrap li .n_nav_newst {
   margin: 2px 5px 0 0;
 }
 
-header nav .r_nav_wrap {
-  float: right;
-}
-
-header nav .r_nav_wrap li:nth-child(1) {
-  background: url(https://www.foodingfactory.com/data/img/allnew/layout/n_sharp.svg)
-    no-repeat 0 19px;
-}
-
-header nav .r_nav_wrap li {
-  float: left;
-  height: 50px;
-  line-height: 50px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  color: #474747;
-}
-
-header nav .r_nav_wrap li a {
-  color: #474747;
-  padding: 0 0 0 13px;
-}
-
 /* GNB */
 nav .l_nav_wrap li.first_nav {
   background: url(/icons/category.svg) no-repeat 39px 18px;
@@ -721,333 +640,54 @@ header nav .gnb {
   position: relative;
 }
 header nav .gnb .ctg_wrap {
-  width: 172px;
+  width: 100%;
   border: 2px solid #ff7400;
   box-sizing: border-box;
   position: absolute;
   top: 50px;
   background: #fff;
   z-index: 900;
-  padding: 11px 0 6px;
-  left: 200px;
+  padding: 30px;
+  left: 0;
 }
-
-header nav .gnb .ctg_wrap > ul li {
-  position: relative;
+header nav .gnb .ctg_wrap .depth1 {
+  display: flex;
+  column-gap: 40px;
 }
-
-header nav .gnb .ctg_wrap ul li .ctg_name {
+header nav .gnb .ctg_wrap .depth1 > li > a {
+  font-weight: 700;
+  font-size: 15px;
   display: inline-block;
-  height: 32px;
-  line-height: 32px;
-  cursor: pointer;
-  padding: 0 10px 0 19px;
-  font-size: 13px;
-  font-weight: 300;
-  letter-spacing: -0.025em;
-  color: #333;
-  box-sizing: border-box;
-}
-
-header nav .gnb .ctg_wrap ul.depth_3 li .ctg_name {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
   width: 100%;
 }
 
-header nav .gnb .ctg_wrap ul li:hover {
-  background: #ff7400;
+header nav .gnb .ctg_wrap .depth1 > li:hover > a {
+  color: #ff7400;
+  font-weight: 700;
 }
 
-header nav .gnb .ctg_wrap > ul li:hover > .depth_2 {
-  display: block !important;
+header nav .gnb .ctg_wrap .depth2 {
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  width: 300px;
+}
+header nav .gnb .ctg_wrap .depth2 > li {
+  width: 150px;
+}
+header nav .gnb .ctg_wrap .depth2 > li > a {
+  font-size: 14px;
+}
+header nav .gnb .ctg_wrap .depth2 > li:hover > a {
+  color: #ff7400;
+  font-weight: 700;
 }
 
-header nav .gnb .ctg_wrap ul li:hover > .ctg_name {
-  font-weight: 500;
-  color: #fff;
-}
-
-header nav .gnb .ctg_wrap > ul > li > .ctg_name:before {
-  content: "";
-  display: none;
-  width: 25px;
-  height: 25px;
-  background: url("https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/new_ctg_icon.png")
-    no-repeat;
-  background-size: 75px;
-  vertical-align: top;
-  margin: 3px 7px 0 0;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c199 .ctg_name:before {
-  background-position-y: 0;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c200 .ctg_name:before {
-  background-position-y: -25px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c201 .ctg_name:before {
-  background-position-y: -50px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c202 .ctg_name:before {
-  background-position-y: -75px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c203 .ctg_name:before {
-  background-position-y: -100px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c204 .ctg_name:before {
-  background-position-y: -125px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c205 .ctg_name:before {
-  background-position-y: -150px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c206 .ctg_name:before {
-  background-position-y: -175px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c221 .ctg_name:before {
-  background-position-y: -200px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c207 .ctg_name:before {
-  background-position-y: -325px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c208 .ctg_name:before {
-  background-position-y: -350px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c209 .ctg_name:before {
-  background-position-y: -375px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c210 .ctg_name:before {
-  background-position-y: -225px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c211 .ctg_name:before {
-  background-position-y: -250px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c296 .ctg_name:before {
-  background-position-y: -275px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c213 .ctg_name:before {
-  background-position-y: -300px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c214 .ctg_name:before {
-  background-position-y: -400px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c215 .ctg_name:before {
-  background-position-y: -425px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c216 .ctg_name:before {
-  background-position-y: -450px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.c218 .ctg_name:before {
-  background-position-y: -475px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.concept .ctg_name:before {
-  background-position-y: -500px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.fd_brand .ctg_name:before {
-  background-position-y: -525px;
-}
-
-header nav .gnb .ctg_wrap > ul > li.on .ctg_name:before {
-  background-position-x: -25px;
-}
-
-header nav .gnb .ctg_wrap > ul span.line {
-  display: inline-block;
-  width: 100%;
-  height: 1px;
-  background: #cbcbcb;
-  margin: 2px 0 6px;
-  padding: 0;
-}
-
-header nav .gnb .ctg_wrap > ul span.line:before {
-  display: none;
-}
-
-header nav .gnb .ctg_wrap > ul li .arrow {
-  display: inline-block;
-  width: 5px;
-  height: 11px;
-  background: url("https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/arrow_right_fd.svg")
-    no-repeat;
-  background-size: contain;
-  float: right;
-  margin: 11px 12px 0 0;
-}
-
-header nav .gnb .depth_2,
-header nav .gnb .depth_3 {
-  position: absolute;
-  right: -204px;
-  top: -13px;
-  width: 222px;
-  border: 2px solid #ff7400;
-  box-sizing: border-box;
-  background: #fff;
-  z-index: 900;
-  padding: 11px 0 6px;
-}
-
-/* 메뉴컨셉별 */
-header nav .gnb .concept_wrap {
-  position: relative;
-}
-
-header nav .gnb .concept_wrap .depth_2 {
-  width: 204px;
-  left: 0px;
-  top: 50px;
-  height: 565px;
-  /* border-left: 1px solid #cbcbcb; */
-  padding: 0 13px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li {
-  width: 50%;
-  float: left;
-  text-align: center;
-  margin: 25px 0 0 0;
-}
-
-header nav .gnb .concept_wrap .depth_2 li:nth-child(-n + 2) {
-  margin: 25px 0 0 0;
-}
-
-header nav .gnb .concept_wrap .depth_2 li a {
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  color: #444;
-  padding: 0;
-  display: inline-block;
-  height: auto;
-  line-height: normal;
-}
-
-header nav .gnb .concept_wrap .depth_2 li a:before {
-  content: "";
-  width: 60px;
-  height: 60px;
-  display: block;
-  border-radius: 100%;
-  margin: 0 auto 8px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.hof a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_pub.svg)
-    no-repeat center #f3f3f3;
-  background-size: 30px 34px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.pocha a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_bistro.svg)
-    no-repeat center #f3f3f3;
-  background-size: 16px 44px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.cafe a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_coffee.svg)
-    no-repeat center #f3f3f3;
-  background-size: 25px 33px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.dessert a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_cafe.svg)
-    no-repeat center #f3f3f3;
-  background-size: 30px 30px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.tea a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_tea.svg)
-    no-repeat center #f3f3f3;
-  background-size: 31px 26px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.mealkit a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_mealkit.svg)
-    no-repeat center #f3f3f3;
-  background-size: 37px 25px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.sauce a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_sauce.svg)
-    no-repeat center #f3f3f3;
-  background-size: 34px 25px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.bunsic a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_tteokbokki.svg)
-    no-repeat center #f3f3f3;
-  background-size: 37px 35px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.snack a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_easyfood.svg)
-    no-repeat center #f3f3f3;
-  background-size: 30px 30px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.delivery a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_delivery.svg)
-    no-repeat center #f3f3f3;
-  background-size: 34px 31px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.japaness a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_sushi.svg)
-    no-repeat center #f3f3f3;
-  background-size: 36px 20px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.meat a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_meat.svg)
-    no-repeat center #f3f3f3;
-  background-size: 37px 26px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.health a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_salad.svg)
-    no-repeat center #f3f3f3;
-  background-size: 31px 31px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.fixtures a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_consumable.svg)
-    no-repeat center #f3f3f3;
-  background-size: 23px 31px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.pcroom a:before {
-  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/layout/n_concept_pcroom.svg)
-    no-repeat center #f3f3f3;
-  background-size: 33px 31px;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.on {
-  background: none;
-}
-
-header nav .gnb .concept_wrap .depth_2 li.on a:before {
-  background-color: #ff7400;
+header nav .gnb .ctg_wrap .depth2 > li {
+  display: flex;
 }
 
 /* 푸딩브랜드 */
@@ -1187,7 +827,6 @@ header nav .gnb .ctg_wrap > ul li.fd_brand .depth_2 li.farm a p:before {
 /* FOOTER */
 footer {
   text-align: left;
-  margin: 40px 0 0 0;
 }
 
 footer .ft_sec_1 {
