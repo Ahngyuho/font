@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/css/store/stores.css" />
   <link rel="stylesheet" href="/css/layout.css" />
   <script src="/js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
         <h1>맛집 리스트</h1>
         <div class="category_box">
           <ul class="category_list">
-            <li class="big_category">전체</li>
+            <li class="big_category picked">전체</li>
             <li class="big_category">한식</li>
             <li class="big_category">중식</li>
             <li class="big_category">양식</li>
@@ -30,7 +31,7 @@
           </ul>
 
           <ul class="small_category_list">
-            <li class="small_category">전체</li>
+            <li class="small_category picked">전체</li>
             <li class="small_category">찜/탕</li>
             <li class="small_category">고기/구이</li>
             <li class="small_category">족발/보쌈</li>
@@ -51,11 +52,11 @@
             </li>
           </ul>
         </div>
-        <div class="goods_best_list goods_list_wrap">
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
+        <div class="store_list">
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
               <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
+            </div>
             <div class="info_box">
               <span class="subtitle">떡볶이</span>
               <span class="store_name">장뜰떡볶이</span>
@@ -68,11 +69,11 @@
               </div>
               <span class="subtitle">서울 동작구</span>
             </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
               <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
+            </div>
             <div class="info_box">
               <span class="subtitle">떡볶이</span>
               <span class="store_name">장뜰떡볶이</span>
@@ -85,11 +86,11 @@
               </div>
               <span class="subtitle">서울 동작구</span>
             </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
               <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
+            </div>
             <div class="info_box">
               <span class="subtitle">떡볶이</span>
               <span class="store_name">장뜰떡볶이</span>
@@ -102,11 +103,11 @@
               </div>
               <span class="subtitle">서울 동작구</span>
             </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
               <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
+            </div>
             <div class="info_box">
               <span class="subtitle">떡볶이</span>
               <span class="store_name">장뜰떡볶이</span>
@@ -119,11 +120,11 @@
               </div>
               <span class="subtitle">서울 동작구</span>
             </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
               <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
+            </div>
             <div class="info_box">
               <span class="subtitle">떡볶이</span>
               <span class="store_name">장뜰떡볶이</span>
@@ -136,97 +137,152 @@
               </div>
               <span class="subtitle">서울 동작구</span>
             </div>
-          </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
+          <a href="/store/store_detail.html" target="_blank" class="store_item">
+            <div class="img_box">
+              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
+            </div>
+            <div class="info_box">
+              <span class="subtitle">떡볶이</span>
+              <span class="store_name">장뜰떡볶이</span>
+              <div class="review_box">
+                <img src="/icons/star_fill.svg" alt="star" class="icon" />
+                <div class="review_content_box">
+                  <span>4.9</span>
+                  <span class="subtitle">(38)</span>
+                </div>
+              </div>
+              <span class="subtitle">서울 동작구</span>
+            </div>
+          </a>
 
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
-              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
-            <div class="info_box">
-              <span class="subtitle">떡볶이</span>
-              <span class="store_name">장뜰떡볶이</span>
-              <div class="review_box">
-                <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                <div class="review_content_box">
-                  <span>4.9</span>
-                  <span class="subtitle">(38)</span>
-                </div>
-              </div>
-              <span class="subtitle">서울 동작구</span>
-            </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
-              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
-            <div class="info_box">
-              <span class="subtitle">떡볶이</span>
-              <span class="store_name">장뜰떡볶이</span>
-              <div class="review_box">
-                <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                <div class="review_content_box">
-                  <span>4.9</span>
-                  <span class="subtitle">(38)</span>
-                </div>
-              </div>
-              <span class="subtitle">서울 동작구</span>
-            </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
-              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
-            <div class="info_box">
-              <span class="subtitle">떡볶이</span>
-              <span class="store_name">장뜰떡볶이</span>
-              <div class="review_box">
-                <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                <div class="review_content_box">
-                  <span>4.9</span>
-                  <span class="subtitle">(38)</span>
-                </div>
-              </div>
-              <span class="subtitle">서울 동작구</span>
-            </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
-              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
-            <div class="info_box">
-              <span class="subtitle">떡볶이</span>
-              <span class="store_name">장뜰떡볶이</span>
-              <div class="review_box">
-                <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                <div class="review_content_box">
-                  <span>4.9</span>
-                  <span class="subtitle">(38)</span>
-                </div>
-              </div>
-              <span class="subtitle">서울 동작구</span>
-            </div>
-          </div>
-          <div class="list">
-            <a href="/store/store_detail.html" target="_blank" class="img_box">
-              <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-            </a>
-            <div class="info_box">
-              <span class="subtitle">떡볶이</span>
-              <span class="store_name">장뜰떡볶이</span>
-              <div class="review_box">
-                <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                <div class="review_content_box">
-                  <span>4.9</span>
-                  <span class="subtitle">(38)</span>
-                </div>
-              </div>
-              <span class="subtitle">서울 동작구</span>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
     <footer id="footer"></footer>
+    <script>
+      const getStoreList = async () => {
+        await axios.get('https://8ef7abb4-a56b-4eb1-a6f8-ea0868b3e6fc.mock.pstmn.io/stores',
+          {
+            "sort": "HOT",
+            "place": "서울",
+            "category": 1
+          }
+        )
+          .then((response) => {
+            console.log(response.data);
+            return response.data;
+          })
+          .catch((error) => {
+            console.error('Error fetching data:', error);
+          });
+      }
+      getStoreList();
+    </script>
+    <script src="/js/store.js"></script>
   </div>
 </body>
 
