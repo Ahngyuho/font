@@ -10,49 +10,30 @@
     <link rel="stylesheet" href="/css/layout.css" />
     <script src="/js/layout.js"></script>
     <style>
-        .container {
-            width: 100%;
+        .all_content {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .main {
-            display: flex;
-            width: 80%;
-            min-width: 43.75rem;
-            padding: 50px 0;
-            max-width: 78.75rem;
         }
 
         .content {
-            width: calc(100% - 10.75rem);
-            border-left: 1px solid #cecece;
-            padding-left: 5rem;
+            padding-left: 80px;
         }
 
-        .user_summary {
+        .user_plus {
             display: flex;
-            gap: 1rem;
         }
 
-        .user_left {
-            display: flex;
-            border-radius: .75rem;
-            background: #FAFAFA;
+        .user_info {
+            width: 43.75rem;
+            height: 10.625rem;
+            border-radius: .625rem;
+            background-color: bisque;
         }
 
-        .user_right {
-            display: flex;
-            width: 16.25rem;
-            padding: .75rem;
-            border-radius: .75rem;
-            border-bottom: .1875rem solid #28b2be;
-            box-shadow: 0rem .125rem .5rem 0rem rgba(0, 0, 0, 0.12);
-            background: linear-gradient(147deg, #20D9DF 0%, #26BBD9 100%);
-            flex-direction: column;
-            gap: 1.75rem;
-            color: #FFF;
+        .user_money {
+            width: 250px;
+            background-color: green;
+            margin-left: 3.4375rem;
+            border-radius: .625rem;
         }
     </style>
 </head>
@@ -60,22 +41,19 @@
 <body>
 
     <header id="header"></header>
-
     <div class="container">
-        <div class="main">
+        <div class="main all_content">
             <client_sidebar id="client_sidebar"></client_sidebar>
             <div class="content">
-                <div class="user_summary">
-                    <div class="user_left"></div>
-                    <div class="user_right">
+                <div class="user_plus">
+                    <div class="user_info">
+                        <div class=""></div>
                     </div>
+                    <div class="user_money"></div>
                 </div>
             </div>
-            <div></div>
         </div>
     </div>
-    </div>
-
     <footer id="footer"></footer>
 </body>
 
