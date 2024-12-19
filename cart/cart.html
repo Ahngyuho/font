@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/css/order/price_sum.css" />
     <link rel="stylesheet" href="/css/payment/payment_mehtod.css" />
     <link rel="stylesheet" href="/css/order/table.css" />
+    <link rel="stylesheet" href="/css/cart/cart.css" />
 
     <script src="/js/layout.js"></script>
   </head>
@@ -102,7 +103,27 @@
               </td>
               <td class="td_order_amount">
                 <div class="order_goods_num">
-                  <strong>1개</strong>
+                  <div>
+                    <span class="count_box">
+                      <button class="minus" value></button>
+                      <span class="min_order_cnt" style="display: none">1</span>
+                      <input type="hidden" name="sale_unit" value="1" />
+                      <span class="stock_cnt" style="display: none">0</span>
+                      <span class="change_loading" style="display: none"></span>
+                      <input
+                        type="text"
+                        name="goodsCnt[]"
+                        class="goodsCnt"
+                        id="_goodsCnt_4556515"
+                        value="2"
+                      />
+                      <button type="button" class="plus" value=""></button>
+                      <span class="max_order_cnt" style="display: none">0</span>
+                    </span>
+                    <span class="cart_go" data-cart-sno="4556515"
+                      >수량변경</span
+                    >
+                  </div>
                 </div>
               </td>
               <td>
