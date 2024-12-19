@@ -7,7 +7,7 @@
 
 .main {
   width: 80%;
-  max-width: 56.25rem;
+  min-width: 43.75rem;
   max-width: 78.75rem;
   display: flex;
   justify-content: space-between;
@@ -579,6 +579,10 @@
 
 
 @media (max-width: 960px) {
+  .main {
+    min-width: auto;
+    max-width: 35rem;
+  }
   .store {
     min-width: 25rem;
   }
