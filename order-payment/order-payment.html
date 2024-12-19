@@ -1381,6 +1381,22 @@ const getOrderDetails = async () => {
 
 getOrderDetails();
 
+const registerOrderUserInfo = async () => {
+  await axios
+ .post('https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/orderUser', {
+ userName: '안규호',
+ phone: "010-7507-9483",
+ email: "powergyuho@gmail.com",
+ })
+ .then((response) => {
+ console.log('POST Response:', response.data);
+ })
+ .catch((error) => {
+ console.error('Error:', error);
+ });
+}
+
+registerOrderUserInfo();
 
 const registerProductReview = async () => {
   axios.put(
@@ -1392,6 +1408,22 @@ const registerProductReview = async () => {
 
   })
 }
+
+const getCarts = async () => {
+  axios.get(
+    "https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/carts"
+  ).then((response) => {
+    const carts = response.data;
+    console.log(carts);
+  })
+  .catch((error) => {
+ console.error('Error:', error);
+  })
+}
+
+getCarts();
+
+
 
        </script>
   </body>
