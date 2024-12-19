@@ -114,7 +114,7 @@ audio {
     repeat;
 }
 
-input[type="text"],
+ input[type="text"],
 input[type="password"] {
   height: 1.9375rem;
   padding: 0 0.3125rem;
@@ -146,6 +146,7 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 textarea:disabled {
   background: #f9f9f9;
 }
