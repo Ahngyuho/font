@@ -648,13 +648,13 @@
               </form>
               <!-- 상품 주문버튼 -->
               <div class="btn_choice_box">
-                <button
+                <!-- <button
                   class="btn_add_wish btn_buy_wish fc1"
                   id="wishBtn"
                   onclick="hdbAddToWishList();"
                 >
                   찜
-                </button>
+                </button> -->
                 <button
                   class="btn_add_cart btn_buy_cart bc2 fc5"
                   id="cartBtn"
@@ -675,9 +675,177 @@
             </div>
             <!-- //상품상단 오른쪽 -->
           </div>
+          <ul class="submenu_list">
+            <li class="submenu_item" data-target="intro_box" style="font-weight: 700; color: rgb(255, 116, 0);">소개</li>
+            <li class="submenu_item" data-target="menu_box" style="font-weight: 400; color: rgb(26, 26, 26);">메뉴</li>
+            <li class="submenu_item" data-target="review_box" style="font-weight: 400; color: rgb(26, 26, 26);">리뷰</li>
+            <li class="submenu_item" style="font-weight: 400; color: rgb(26, 26, 26);">밀키트</li>
+          </ul>
+
+          <div id="intro_box" class="content_box">
+            <div class="intro_item">
+              <h2>매장 소개</h2>
+              <p>"돼지고기 등심과 가브리살, 삼겹살을 한 번에 맛볼 수 있는 '알등심' 전문점 [고도식] 잠실점입니다.
+                모든 고기는 직화 그릴에서 초벌 후 무쇠팬에서 고기마다 최적의 굽기로 구워드립니다. 오직 [고도식]에서만 맛볼 수 있는
+                소스부터 하이볼, 식사 메뉴까지 준비돼 있습니다.
+                정성 가득한 음식과 친절한 서비스로 보답하겠습니다. 감사합니다.
+              </p>
+            </div>
+            <div class="intro_item">
+              <h2>찾아오는 방법</h2>
+              <p>송파나루역에서 도보 6분, 석촌역에서 도보 11분</p>
+            </div>
+            <div class="intro_item">
+              <h2>주차 안내</h2>
+              <p>매장 내 주차공간이 없어 인근 민영 주차장을 이용 부탁드립니다.</p>
+            </div>
+        </div>
+        <div id="menu_box" class="content_box">
+          <h2>메뉴판</h2>
+          <ul>
+            <li class="menu_list">
+              <p>삼겹살 160g</p>
+              <div class="menu_dots"></div>
+              <p>17,000원</p>
+            </li>
+            <li class="menu_list">
+              <p>메밀냉면(물)</p>
+              <div class="menu_dots"></div>
+              <p>7,000원</p>
+            </li>
+            <li class="menu_list">
+              <p>메밀냉면(비빔)</p>
+              <div class="menu_dots"></div>
+              <p>8,000원</p>
+            </li>
+            <li class="menu_list">
+              <p>얼큰 순두부찌개</p>
+              <div class="menu_dots"></div>
+              <p>7,000원</p>
+            </li>
+            <li class="menu_list">
+              <p>차돌 된장찌개</p>
+              <div class="menu_dots"></div>
+              <p>8,000원</p>
+            </li>
+          </ul>
+        </div>
+
+        <div id="review_box" class="content_box">
+          <div class="review_header">
+            <img src="/icons/star_fill.svg" alt="star">
+            <div>
+              <p>4.7</p>
+              <span>53개의 리뷰</span>
+            </div>
+          </div>
+
+          <ul class="review_list">
+            <li class="review_item">
+
+              <div class="star_box">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_empty.svg" alt="star">
+
+              </div>
+              <div class="review_user">
+                <span id="userName">박**</span>
+                <span id="createdAt">24.12.17</span>
+              </div>
+              <div class="review_image_box">
+                <img src="https://d12zq4w4guyljn.cloudfront.net/750_750_20241123105001_photo1_394db3cb2fa0.jpg"
+                  alt="review image1">
+                <img src="https://d12zq4w4guyljn.cloudfront.net/750_750_20241123105001_photo1_394db3cb2fa0.jpg"
+                  alt="review image2">
+              </div>
+              <p>세트메뉴로 나름 저렴하게 먹었습니다! 직원분들이 고기 부위 설명해주시고 다 구워주십니다.
+                두툼한 고기가 정말 맛있었어요! 송리단길 고기집으로 추천드립니다!</p>
+            </li>
+            <li class="review_item">
+
+              <div class="star_box">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_empty.svg" alt="star">
+
+              </div>
+              <div class="review_user">
+                <span id="userName">박**</span>
+                <span id="createdAt">24.12.17</span>
+              </div>
+              <div class="review_image_box">
+                <img src="https://d12zq4w4guyljn.cloudfront.net/750_750_20241123105001_photo1_394db3cb2fa0.jpg"
+                  alt="review image1">
+                <img src="https://d12zq4w4guyljn.cloudfront.net/750_750_20241123105001_photo1_394db3cb2fa0.jpg"
+                  alt="review image2">
+              </div>
+              <p>세트메뉴로 나름 저렴하게 먹었습니다! 직원분들이 고기 부위 설명해주시고 다 구워주십니다.
+                두툼한 고기가 정말 맛있었어요! 송리단길 고기집으로 추천드립니다!</p>
+            </li>
+            <li class="review_item">
+
+              <div class="star_box">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_empty.svg" alt="star">
+
+              </div>
+              <div class="review_user">
+                <span id="userName">박**</span>
+                <span id="createdAt">24.12.17</span>
+              </div>
+
+              <p>세트메뉴로 나름 저렴하게 먹었습니다! 직원분들이 고기 부위 설명해주시고 다 구워주십니다.
+                두툼한 고기가 정말 맛있었어요! 송리단길 고기집으로 추천드립니다!</p>
+            </li>
+            <li class="review_item">
+
+              <div class="star_box">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_empty.svg" alt="star">
+
+              </div>
+              <div class="review_user">
+                <span id="userName">박**</span>
+                <span id="createdAt">24.12.17</span>
+              </div>
+
+              <p>세트메뉴로 나름 저렴하게 먹었습니다! 직원분들이 고기 부위 설명해주시고 다 구워주십니다.
+                두툼한 고기가 정말 맛있었어요! 송리단길 고기집으로 추천드립니다!</p>
+            </li>
+            <li class="review_item">
+
+              <div class="star_box">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_fill.svg" alt="star">
+                <img src="/icons/star_empty.svg" alt="star">
+
+              </div>
+              <div class="review_user">
+                <span id="userName">박**</span>
+                <span id="createdAt">24.12.17</span>
+              </div>
+
+              <p>세트메뉴로 나름 저렴하게 먹었습니다! 직원분들이 고기 부위 설명해주시고 다 구워주십니다.
+                두툼한 고기가 정말 맛있었어요! 송리단길 고기집으로 추천드립니다!</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
     <footer id="footer"></footer>
+    <script src="/js/store_detail.js"></script>
   </body>
 </html>

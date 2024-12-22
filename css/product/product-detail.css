@@ -299,3 +299,155 @@
   color: #333;
   font-weight: 400;
 }
+
+
+/* 상세 */
+
+/* 목록 선택 */
+.submenu_list {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+}
+
+.submenu_item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.submenu_item:active,
+.submenu_item:hover {
+  color: #ff7400;
+  border-bottom: 1px solid #ff7400;
+}
+
+.submenu_item.picked {
+  font-weight: 700;
+  color: #ff7400;
+}
+
+
+
+/* 매장 소개 */
+#intro_box {
+  display: none;
+  padding: 0 1.5rem;
+}
+
+.intro_item {
+  margin-bottom: 2rem;
+}
+
+.intro_item>h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* 메뉴 리스트 */
+
+#menu_box {
+  margin: 0 auto;
+  display: none;
+  border: 1px solid #b6bdc7;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#menu_box>h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#menu_box>ul {
+  padding: 0.5rem;
+}
+
+.menu_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.menu_list:first-child {
+  margin-top: 0;
+}
+
+.menu_dots {
+  flex-grow: 1;
+  height: 1px;
+  margin: auto 1rem;
+  border-top: 1px dashed #ccc;
+}
+
+/* 리뷰  */
+#review_box {
+  display: none;
+}
+
+.review_header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  padding: 1.5rem 0;
+}
+
+.review_header>img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.review_header>div>p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 리뷰 아이템 */
+.review_item {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #d8dde5;
+}
+
+.star_box {
+  display: flex;
+  margin: 0 0 0.2rem -0.2rem;
+}
+
+.review_user {
+  color: #7e7e7e;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.review_user>#userName::after {
+  content: "•";
+  margin-left: 0.3rem;
+  color: #ccc;
+}
+
+.review_image_box {
+  width: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.review_image_box>img {
+  width: 10rem;
+  border-radius: 1rem;
+}
