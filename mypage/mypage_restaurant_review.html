@@ -1,213 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css" />
-    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet">
+    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet" />
+    <link href="../css/mypage/mypage_restaurant_review.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/layout.css" />
     <script src="/js/layout.js"></script>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-        }
+      /* ============================================================*/
+      .user_plus {
+        display: flex;
+      }
 
-        .content {
-            display: flex;
-            padding: 0 !important;
-            position: relative;
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            min-height: 70vh;
-            line-height: 1.6;
-        }
+      .user_info {
+        display: flex;
+        width: 43.75rem;
+        height: 140px;
+        padding: 18px 0px 18px 18px;
+        border-radius: 0.625rem;
+        background-color: #fafafa;
+      }
+      .info01 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+      }
+      .info_name {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .info_type {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .change_buttonDiv {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 50px;
+      }
+      .change_button {
+        font-size: 18px;
+        padding: 0 12px;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+      }
+      .info02 {
+        width: 50%;
+        height: 100%;
+      }
+      .info_ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+      .info_ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        gap: 10px;
+      }
 
-        .stores_review {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
+      .info_ul li:first-child {
+        border-left: 0.0625rem solid #cecece;
+        border-right: 0.0625rem solid #cecece;
+      }
 
-        .reviews {
-            width: 75rem;
-            height: 62.5rem;
-        }
+      .li_line01 {
+        font-size: 20px;
+      }
 
-        .review {
-            display: flex;
-            width: 75rem;
-            height: 20rem;
-            padding-top: .625rem;
-            padding-bottom: 1.875rem;
-            border-bottom: .0313rem solid rgba(0, 0, 0, 0.5);
-        }
-
-        .review_image_box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 18.75rem;
-            height: 20rem;
-        }
-
-        .review_image {
-            width: 12.5rem;
-            height: 12.5rem;
-        }
-
-        .review_info_box {
-            display: flex;
-            padding-left: 6.25rem;
-            flex-direction: column;
-            width: 56.25rem;
-            height: 20rem;
-        }
-
-        .review_score {
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-
-        .star_image {
-            width: 1.875rem;
-        }
-
-        .review_score_write {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.875rem;
-            font-weight: 2.5rem;
-            color: black;
-        }
-
-        .review_user_and_time {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            font-size: 1.25rem;
-            color: rgba(0, 0, 0, 0.5);
-        }
-
-        .review_time {
-            margin-left: 1.875rem;
-        }
-
-        .review_storename {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            font-size: 1.25rem;
-        }
-
-        .review_content {
-            flex: 4;
-            display: block;
-            max-height: calc(1.6em * 5);
-            font-size: .9375rem;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+      .li_line02 {
+        font-size: 20px;
+      }
+      /* ============================================================*/
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header id="header"></header>
-    <div class="content">
+    <div class="container">
+      <div class="main all_content">
         <client_sidebar id="client_sidebar"></client_sidebar>
-        <div class="stores_review">
-            <div class="reviews">
-                <div class="review">
-                    <div class="review_image_box">
-                        <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
-                            class="review_image" />
-                    </div>
-                    <div class="review_info_box">
-                        <div class="review_score">
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <div class="review_score_write">5</div>
-                        </div>
-                        <div class="review_user_and_time">
-                            <div class="review_username">canlvinqis</div>
-                            <div class="review_time">24.12.12</div>
-                        </div>
-                        <div class="review_storename">장뜰 떡볶이</div>
-                        <div class="review_content">
-                            친구는 세월의 도둑이다. 봄부터 흐르는 물은 겨울이 되어도 얼지 않듯이 마음에서
-                            우러나오는 우적은 역경이 닥친다고 해서 식지 않는다.
-                            불행했을 때 만난 친구는 가장 소중히 여겨야 한다.
-                            행복했을 때 함께 기쁨을 누리는 친구보다
-                            힘들 떄 슬픔을 덜어지는 친구를 더 많이 신뢰할 수 있다.
-                            부유했을 때는 친구를 사귀기 쉽지만,
-                            어려울 때는 눈을 씻고 찾아봐도 친구를 찾기 어렵다.
-                            누군가 진정한 우정을 나누고 있다 할지라도 그 우정을 지키려면 오랜 시간이 걸린다.
-                            짧은 시간 안에 많은 친구를 얻기란 불가능하다. 왜냐하면
-                            그들은 진정한 친구가 아니기 때문이다.
-                            친구란 말하자면 또 하나의 자신이다.
-                            친구를 보면 그 사람을 알 수 있다.
-                            현명한 사람과 어리석은 사람은 서로 어울리지 않는다.
-                            친구는 나를 동정하는 자가 아니라 나를 돕는 자다.
-                            서로가 고통을 덜어 주지 않는다면 우리는 무엇을 위해 사는 것일까?
-                            우리는 모두 적막한 세계를 떠도는 나그네다.
-                            그 여정에서 찾을 수 있는 최고의 선물은 바로 믿음직한 벗이다.
-                            좋은 벗은 충격을 덜어주는 완충장치와도 같은 것이며
-                            인생의 길에서 충동을 피할 수 있도록 도와준다.
-                            우정만이 세상을 하나로 만들 수 있다.
-                            우정은 영혼의 결혼이다.
-                            간담상조(肝膽相照) 간과 쓸개를 드러내 보인다는 절친한 사이다.
-                            관포지교(管鮑之交) 관숙과 포숙아의 사귐,
-                            변함없는 돈독한 우정.
-                            막역지우(莫逆之友) 마음에 거슬리는 것이 없는 친구,
-                            더할 나위 없이 친한 친구
-                            문경지교(刎頸之交) 목을 베어줄 정도의 우정, 변함없는 우정
-                            참된 사랑이 아무리 드물다 해도 참된 우정만큼 드문 것은 아니다.
-                            참된 우정은 건강과 같아서 그것을 잃어버려야만 그 가치가 드러난다.
-                            사랑에는 신뢰가 우정에는 이해가 필요하다.
-                        </div>
-                    </div>
+        <div class="content">
+          <div class="user_plus">
+            <div class="user_info">
+              <div class="info01">
+                <div class="info_name">오승재님은</div>
+                <div class="info_type">일반회원 입니다</div>
+                <div class="change_buttonDiv">
+                  <button class="change_button">계정 타입 전환</button>
                 </div>
-                <div class="review">
-                    <div class="review_image_box">
-                        <img src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
-                            class="review_image" />
-                    </div>
-                    <div class="review_info_box">
-                        <div class="review_score">
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <img src="/icons/star_fill.svg" class="star_image" />
-                            <div class="review_score_write">5</div>
-                        </div>
-                        <div class="review_user_and_time">
-                            <div class="review_username">canlvinqis</div>
-                            <div class="review_time">24.12.12</div>
-                        </div>
-                        <div class="review_storename">장뜰 떡볶이</div>
-                        <div class="review_content">
-                            아주 좋아요
-                        </div>
-                    </div>
-                </div>
-
+              </div>
+              <div class="info02">
+                <ul class="info_ul">
+                  <li>
+                    <div class="li_line01">작성 가능한 리뷰</div>
+                    <div class="li_line02">1건</div>
+                  </li>
+                  <li>
+                    <div class="li_line01">내가 작성한 리뷰</div>
+                    <div class="li_line02">2건</div>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div class="user_money"></div>
+          </div>
+          <div class="my_resReviews">
+            <div class="my_reviewTab">
+              <button class="tab_button active" data-tab="tab1">
+                작성가능한 리뷰
+              </button>
+              <button class="tab_button" data-tab="tab2">
+                내가 작성한 리뷰
+              </button>
+            </div>
+            <div class="my_reviewTabContent">
+              <div id="tab1" class="tab_content active">
+                <div class="review_contents">
+                  <!-- 리뷰 항목 -->
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">BBQ 치킨</div>
+                      <div class="review_category notYet_review">치킨</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2024.11.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">장뜰 떡볶이</div>
+                      <div class="review_category notYet_review">떡볶이</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2023.10.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">와라 갈비탕</div>
+                      <div class="review_category notYet_review">갈비탕</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2012.12.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab2" class="tab_content">
+                <div class="review_contents">
+                  <!-- 리뷰 항목 -->
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">BBQ 치킨</div>
+                      <div class="review_stars">★★★★★</div>
+                      <p class="review_text">
+                        정말 맛있었어요! 다음에도 먹으러 갈게요.
+                      </p>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">치킨</div>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">장뜰 떡볶이</div>
+                      <div class="review_stars">★★★★☆</div>
+                      <p class="review_text">빨라서 좋았어요.</p>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">떡볶이</div>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">와라 갈비탕</div>
+                      <div class="review_stars">★★★☆☆</div>
+                      <p class="review_text">
+                        음식은 괜찮았지만 분위기가 시끄러웠어요.
+                      </p>
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">갈비탕</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-
-
     <footer id="footer"></footer>
-</body>
 
+    <script>
+      // 모든 탭 버튼에 클릭 이벤트 추가
+      document.querySelectorAll(".tab_button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetTab = button.dataset.tab; // 선택된 탭 ID
+
+          // 모든 버튼에서 active 클래스 제거
+          document
+            .querySelectorAll(".tab_button")
+            .forEach((btn) => btn.classList.remove("active"));
+
+          // 모든 콘텐츠에서 active 클래스 제거
+          document
+            .querySelectorAll(".tab_content")
+            .forEach((content) => content.classList.remove("active"));
+
+          // 현재 클릭된 버튼에 active 클래스 추가
+          button.classList.add("active");
+
+          // 연결된 콘텐츠에 active 클래스 추가
+          document.querySelector(`#${targetTab}`).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>

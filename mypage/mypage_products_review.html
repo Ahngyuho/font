@@ -1,60 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css" />
-    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet">
+    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet" />
+    <link href="../css/mypage/mypage_userPlus.css" rel="stylesheet" />
+    <link href="../css/mypage/mypage_products_review.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/layout.css" />
     <script src="/js/layout.js"></script>
     <style>
-        .all_content {
-            display: flex;
-        }
+      /* ============================================================*/
+      .user_plus {
+        display: flex;
+      }
 
-        .content {
-            padding-left: 80px;
-        }
+      .user_info {
+        display: flex;
+        width: 43.75rem;
+        height: 140px;
+        padding: 18px 0px 18px 18px;
+        border-radius: 0.625rem;
+        background-color: #fafafa;
+      }
+      .info01 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+      }
+      .info_name {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .info_type {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .change_buttonDiv {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 50px;
+      }
+      .change_button {
+        font-size: 18px;
+        padding: 0 12px;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+      }
+      .info02 {
+        width: 50%;
+        height: 100%;
+      }
+      .info_ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+      .info_ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        gap: 10px;
+      }
 
-        .user_plus {
-            display: flex;
-        }
+      .info_ul li:first-child {
+        border-left: 0.0625rem solid #cecece;
+        border-right: 0.0625rem solid #cecece;
+      }
 
-        .user_info {
-            width: 43.75rem;
-            height: 10.625rem;
-            border-radius: .625rem;
-            background-color: bisque;
-        }
+      .li_line01 {
+        font-size: 20px;
+      }
 
-        .user_money {
-            width: 250px;
-            background-color: green;
-            margin-left: 3.4375rem;
-            border-radius: .625rem;
-        }
+      .li_line02 {
+        font-size: 20px;
+      }
+      /* ============================================================*/
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header id="header"></header>
     <div class="container">
-        <div class="main all_content">
-            <client_sidebar id="client_sidebar"></client_sidebar>
-            <div class="content">
-                <div class="user_plus">
-                    <div class="user_info">
-                        <div class=""></div>
-                    </div>
-                    <div class="user_money"></div>
+      <div class="main all_content">
+        <client_sidebar id="client_sidebar"></client_sidebar>
+        <div class="content">
+          <div class="user_plus">
+            <div class="user_info">
+              <div class="info01">
+                <div class="info_name">오승재님은</div>
+                <div class="info_type">일반회원 입니다</div>
+                <div class="change_buttonDiv">
+                  <button class="change_button">계정 타입 전환</button>
                 </div>
+              </div>
+              <div class="info02">
+                <ul class="info_ul">
+                  <li>
+                    <div class="li_line01">작성 가능한 리뷰</div>
+                    <div class="li_line02">1건</div>
+                  </li>
+                  <li>
+                    <div class="li_line01">내가 작성한 리뷰</div>
+                    <div class="li_line02">2건</div>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+          <div class="my_productReviews">
+            <div class="my_reviewTab">
+              <button class="tab_button active" data-tab="tab1">
+                작성가능한 리뷰
+              </button>
+              <button class="tab_button" data-tab="tab2">
+                내가 작성한 리뷰
+              </button>
+            </div>
+            <div class="my_reviewTabContent">
+              <div id="tab1" class="tab_content active">
+                <div class="review_contents">
+                  <!-- 리뷰 항목 -->
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">BBQ 치킨</div>
+                      <div class="review_category notYet_review">치킨</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2024.11.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">장뜰 떡볶이</div>
+                      <div class="review_category notYet_review">떡볶이</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2023.10.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">와라 갈비탕</div>
+                      <div class="review_category notYet_review">갈비탕</div>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right notYet_right">
+                      <div class="review_date">2012.12.23</div>
+                      <button class="review_button">리뷰 쓰러 가기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab2" class="tab_content">
+                <div class="review_contents">
+                  <!-- 리뷰 항목 -->
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">BBQ 치킨</div>
+                      <div class="review_stars">★★★★★</div>
+                      <p class="review_text">
+                        정말 맛있었어요! 다음에도 주문할게요.
+                      </p>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">치킨</div>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">장뜰 떡볶이</div>
+                      <div class="review_stars">★★★★☆</div>
+                      <p class="review_text">배달이 빨라서 좋았어요.</p>
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                        alt="Review Image"
+                        class="review_image"
+                      />
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">떡볶이</div>
+                    </div>
+                  </div>
+                  <div class="review_item">
+                    <div class="review_left">
+                      <div class="review_itemName">와라 갈비탕</div>
+                      <div class="review_stars">★★★☆☆</div>
+                      <p class="review_text">
+                        음식은 괜찮았지만 양이 조금 적었어요.
+                      </p>
+                    </div>
+                    <div class="review_right">
+                      <div class="review_date">2024.12.23</div>
+                      <div class="review_category">갈비탕</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <footer id="footer"></footer>
-</body>
 
+    <script>
+      // 모든 탭 버튼에 클릭 이벤트 추가
+      document.querySelectorAll(".tab_button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const targetTab = button.dataset.tab; // 선택된 탭 ID
+
+          // 모든 버튼에서 active 클래스 제거
+          document
+            .querySelectorAll(".tab_button")
+            .forEach((btn) => btn.classList.remove("active"));
+
+          // 모든 콘텐츠에서 active 클래스 제거
+          document
+            .querySelectorAll(".tab_content")
+            .forEach((content) => content.classList.remove("active"));
+
+          // 현재 클릭된 버튼에 active 클래스 추가
+          button.classList.add("active");
+
+          // 연결된 콘텐츠에 active 클래스 추가
+          document.querySelector(`#${targetTab}`).classList.add("active");
+        });
+      });
+    </script>
+  </body>
 </html>
