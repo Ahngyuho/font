@@ -1,3 +1,87 @@
+.location_wrap {
+  position: relative;
+  width: 100%;
+}
+
+.location_wrap .location_cont {
+  width: 1260px;
+  margin: 0 auto 13px 0;
+  text-align: right;
+}
+
+.location_cont em {
+  display: inline-block;
+  padding: 12px 0 10px 0;
+  color: #777777;
+  font-size: 12.5px;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+.location_wrap .location_cont:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.order_wrap .order_tit {
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.order_wrap .order_tit h2 {
+  float: left;
+  font-size: 28px;
+  color: #222222;
+}
+
+.order_wrap .order_tit ol {
+  float: right;
+  line-height: 62px;
+}
+
+.order_wrap .order_tit .page_on {
+  color: #00a7b3;
+  font-weight: bold;
+}
+.order_wrap .order_tit ol li {
+  float: left;
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.order_wrap .order_tit ol li {
+  float: left;
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.order_wrap .order_tit ol li {
+  float: left;
+  font-size: 14px;
+  color: #d1d1d1;
+}
+
+.order_wrap .order_tit {
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.td_order_amount {
+  display: flex; /* Flexbox 활성화 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
 .count_box button.minus {
   background: url(https://thenaum.cdn-nhncommerce.com/data/skin/front/moment/img/cnt_minus.gif)
     no-repeat center;
@@ -10,8 +94,13 @@
 }
 
 .count_box {
+  width: min-content;
   border: 1px solid #969696;
   display: flex;
+  align-items: center;
+  height: 100%;
+  /* display: inline-block; */
+  justify-content: center;
   box-sizing: border-box;
   margin: 11px 0 0 0;
   position: relative;
@@ -47,4 +136,34 @@
   height: 20px;
   line-height: 18px;
   cursor: pointer;
+}
+
+/* 장바구니 버튼 */
+
+.btn_order_box {
+  padding: 15px 0 0 0;
+}
+.btn_order_box {
+  overflow: hidden;
+  padding: 30px 0 0 0;
+  text-align: right;
+}
+
+.btn_order_box .btn_left_box {
+  float: left;
+}
+.btn_left_box {
+  text-align: left;
+}
+
+.btn_order_choice_del,
+.btn_order_choice_wish {
+  display: inline-block;
+  min-width: 120px;
+  height: 30px;
+  padding: 0 15px 0 15px;
+  color: #222222;
+  border: 1px solid #dddddd;
+  text-align: center;
+  line-height: 28px;
 }
