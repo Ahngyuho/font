@@ -10,37 +10,8 @@
     <link rel="stylesheet" href="/css/layout.css" />
     <script src="/js/layout.js"></script>
     <style>
-        body {
+        .all_content {
             display: flex;
-            flex-direction: column;
-        }
-
-        .content {
-            display: flex;
-            padding: 0 !important;
-            position: relative;
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            min-height: 70vh;
-            line-height: 1.6;
-        }
-
-        .stores_review {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            background-color: aquamarine;
-        }
-
-        .stores_review .reviews {
-            width: 80%;
-            background-color: aqua;
-        }
-
-        .stores_review .reviews .review {
-            width: 100%;
         }
     </style>
 </head>
@@ -48,21 +19,12 @@
 <body>
 
     <header id="header"></header>
-    <div class="content">
-        <client_sidebar id="client_sidebar"></client_sidebar>
-        <div class="stores_review">
-            <div class="reviews">
-                <div class="review">
-                    <div class="image_box">
-
-                    </div>
-                    <div class="info_box"></div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="main all_content">
+            <client_sidebar id="client_sidebar"></client_sidebar>
+            <div></div>
         </div>
     </div>
-
-
     <footer id="footer"></footer>
 </body>
 
