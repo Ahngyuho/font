@@ -1,0 +1,453 @@
+.top_summary {
+  padding: 0 80px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.top_summary .left_cont {
+  margin: 0 50px 50px 0;
+  position: sticky;
+  top: 80px;
+}
+
+.top_summary .right_cont .add_info {
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  margin: 0 0 10px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 0 10px;
+}
+
+.top_summary .right_cont .goods_name {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.04em;
+  color: #333;
+  font-weight: 500;
+  max-height: 72px;
+  overflow: hidden;
+  word-break: keep-all;
+}
+
+.top_summary .right_cont .short_des {
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  margin: 8px 0 0;
+  color: #555;
+}
+
+.top_summary .right_cont .price_top {
+  margin: 25px 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 10px 0 5px;
+}
+
+.top_summary .right_cont .price_top .single_wrap {
+  margin: 10px 0 0 0;
+  display: flex;
+  position: relative;
+}
+
+.top_summary .right_cont .price_top .single_wrap .single {
+  font-size: 20px;
+  line-height: 33px;
+  color: #333;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+}
+
+.top_summary .right_cont .price_top .single_wrap .single_price {
+  font-size: 35px;
+  line-height: 25px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.top_summary .right_cont .info > dl {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  min-height: 70px;
+  padding: 0 15px 0 5px;
+}
+
+.top_summary .right_cont .info > dl > dt {
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #333;
+  font-weight: 500;
+  width: 105px;
+  flex-shrink: 0;
+}
+
+.top_summary .right_cont .info > dl > dd {
+  flex-grow: 1;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.05em;
+  color: #555;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+.top_summary .right_cont .info .count {
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.count {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+}
+
+.top_summary .right_cont .info .count .goods_qtycs {
+  display: flex;
+}
+
+.top_summary .right_cont .info .count button {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/goods/goods_view_top.svg)
+    no-repeat;
+}
+
+.top_summary .right_cont .info .count input[name="goodsCnt[]"] {
+  width: 52px;
+  height: 38px;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+}
+
+.top_summary .right_cont .info .count * {
+  border: none;
+}
+
+.top_summary .right_cont .info .count button.up {
+  background-position: -48px 0;
+}
+
+.top_summary .right_cont .info .count button {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/goods/goods_view_top.svg)
+    no-repeat;
+}
+
+.goods_qtycs button {
+  display: block;
+  width: 26px;
+  height: 27px;
+  text-indent: -9999px;
+}
+
+.top_summary .right_cont .btn_choice_box .btn_add_wish {
+  width: 65px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #00a7b3;
+  box-sizing: border-box;
+  flex-basis: auto;
+}
+
+.top_summary .right_cont .btn_choice_box {
+  display: flex;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.top_summary .right_cont .btn_choice_box > *:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+.top_summary .right_cont .btn_choice_box > * {
+  font-size: 22px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  height: 65px;
+  flex-grow: 1;
+  border-radius: 8px;
+  margin: 0;
+  flex-basis: 0;
+  padding: 0;
+}
+
+.top_summary .right_cont .btn_choice_box > * {
+  font-size: 22px;
+  letter-spacing: -0.05em;
+  font-weight: 400;
+  height: 65px;
+  flex-grow: 1;
+  border-radius: 8px;
+  margin: 0;
+  flex-basis: 0;
+  padding: 0;
+}
+
+.btn_add_order,
+.btn_add_order_related,
+.btn_add_cart_related {
+  display: inline-block;
+  width: 170px;
+  height: 60px;
+  margin: 0 0 0 10px;
+  padding: 0;
+  color: #ffffff;
+  font-size: 20px;
+  background: #ff7400;
+  text-align: center;
+  font-weight: 500;
+}
+
+.bc2 {
+  background: #454545;
+}
+
+.top_summary .left_cont .img_photo_big {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.item_content_img span {
+  display: block;
+}
+
+.top_summary .left_cont .review {
+  margin: 20px 0 0 0;
+  display: flex;
+  padding: 0 10px;
+}
+
+.top_summary .left_cont .review dt {
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: -0.03em;
+  color: #333;
+  font-weight: 500;
+  margin: 0 24px 0 0;
+}
+
+.fc3 {
+  color: #474747 !important;
+}
+
+.top_summary .left_cont .review dd {
+  display: flex;
+}
+
+.top_summary .left_cont .review dd > *:not(:last-child) {
+  margin: 0 10px 0 0;
+}
+.top_summary .left_cont .review .star_repeat {
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  background: url(https://thenaum.cdn-nhncommerce.com/data/img/allnew/goods/star_back.svg)
+    no-repeat;
+  width: 120px;
+  height: 20px;
+}
+
+.top_summary .left_cont .review .per {
+  font-size: 23px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.fc5 {
+  color: #ffffff !important;
+}
+
+.top_summary .right_cont .total_wrap {
+  margin: 20px 0 0 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.top_summary .right_cont .total_wrap .total_price {
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 25px;
+  vertical-align: top;
+}
+
+.top_summary .right_cont .total_wrap .total_price_wrap {
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: -0.05em;
+  color: #333;
+  font-weight: 400;
+}
+
+
+/* 상세 */
+
+/* 목록 선택 */
+.submenu_list {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 0 2rem;
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+}
+
+.submenu_item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: content-box;
+}
+
+.submenu_item:active,
+.submenu_item:hover {
+  color: #ff7400;
+  border-bottom: 1px solid #ff7400;
+}
+
+.submenu_item.picked {
+  font-weight: 700;
+  color: #ff7400;
+}
+
+
+
+/* 매장 소개 */
+#intro_box {
+  display: none;
+  padding: 0 1.5rem;
+}
+
+.intro_item {
+  margin-bottom: 2rem;
+}
+
+.intro_item>h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+
+
+/* 메뉴 리스트 */
+
+#menu_box {
+  margin: 0 auto;
+  display: none;
+  border: 1px solid #b6bdc7;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+#menu_box>h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#menu_box>ul {
+  padding: 0.5rem;
+}
+
+.menu_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.menu_list:first-child {
+  margin-top: 0;
+}
+
+.menu_dots {
+  flex-grow: 1;
+  height: 1px;
+  margin: auto 1rem;
+  border-top: 1px dashed #ccc;
+}
+
+/* 리뷰  */
+#review_box {
+  display: none;
+}
+
+.review_header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  padding: 1.5rem 0;
+}
+
+.review_header>img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.review_header>div>p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* 리뷰 아이템 */
+.review_item {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #d8dde5;
+}
+
+.star_box {
+  display: flex;
+  margin: 0 0 0.2rem -0.2rem;
+}
+
+.review_user {
+  color: #7e7e7e;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.review_user>#userName::after {
+  content: "•";
+  margin-left: 0.3rem;
+  color: #ccc;
+}
+
+.review_image_box {
+  width: 30rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.review_image_box>img {
+  width: 10rem;
+  border-radius: 1rem;
+}
