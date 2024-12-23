@@ -1263,5 +1263,73 @@
         </div>
       </div>
       <footer id="footer"></footer>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>;
+      <!-- <script src="/order-payment/orderDetail.js"></script> -->
+       <script>
+        
+const getOrderDetails = async () => {
+  axios
+    .get(
+      "https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/orderDetail"
+    )
+    .then((response) => {
+      // orderDetails 객체 생성
+      const orderDetails =  response.data;
+
+      // orderDetails 출력
+      console.log(orderDetails);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
+};
+
+getOrderDetails();
+
+const registerOrderUserInfo = async () => {
+  await axios
+ .post('https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/orderUser', {
+ userName: '안규호',
+ phone: "010-7507-9483",
+ email: "powergyuho@gmail.com",
+ })
+ .then((response) => {
+ console.log('POST Response:', response.data);
+ })
+ .catch((error) => {
+ console.error('Error:', error);
+ });
+}
+
+registerOrderUserInfo();
+
+const registerProductReview = async () => {
+  axios.put(
+    "https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/products/reviews"
+  ).then((response) => {
+
+  })
+  .catch((error) => {
+
+  })
+}
+
+const getCarts = async () => {
+  axios.get(
+    "https://193e67e5-10ed-40ed-ad63-dc23723ce82b.mock.pstmn.io/carts"
+  ).then((response) => {
+    const carts = response.data;
+    console.log(carts);
+  })
+  .catch((error) => {
+ console.error('Error:', error);
+  })
+}
+
+getCarts();
+
+
+
+       </script>
   </body>
 </html>
