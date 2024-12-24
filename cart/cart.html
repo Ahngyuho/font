@@ -45,7 +45,7 @@
           </ol>
         </div>
         <div class="cart_cont">
-          <div class="order_table_type inner_wrap">
+          <div class="n_order_table_type inner_wrap">
             <!-- 장바구니 상품리스트 시작 -->
             <table>
               <colgroup>
@@ -53,7 +53,7 @@
                 <!-- 체크박스 -->
                 <col />
                 <!-- 상품명/옵션 -->
-                <col style="width: 5%" />
+                <col style="width: 20%" />
                 <!-- 수량 -->
                 <col style="width: 10%" />
                 <!-- 상품금액 -->
@@ -61,7 +61,7 @@
                 <!-- 할인/적립 -->
                 <!-- <col style="width: 10%" /> -->
                 <!-- 합계금액 -->
-                <col style="width: 10%" />
+                <!-- <col style="width: 10%" /> -->
                 <!-- 배송비 -->
               </colgroup>
               <thead>
@@ -88,21 +88,37 @@
                 </tr>
               </thead>
               <tbody>
-                <!--페이스북픽셀 180508-->
-                <script language="javascript">
-                  _G_amt[_google_countvar] = "15,840원".replace(/,/g, "");
-                  _G_nl[_google_countvar] = " 1";
-                  _G_pl[_google_countvar] = "1000004896";
-                  _G_pn[_google_countvar] =
-                    "치즈롤까스(25cm) 1kg (250g*4ea)".replace(
-                      /(<([^>]+)>)/gi,
-                      ""
-                    );
-                  _G_ct[_google_countvar] = "";
-                  _google_countvar++;
-                </script>
-                <!--페이스북픽셀 180508-->
                 <tr>
+                  <td class="td_chk">
+                    <div class="form_element">
+                      <input
+                        type="checkbox"
+                        id="cartSno1_4556515"
+                        name="cartSno[]"
+                        value="4556515"
+                        checked="checked"
+                        data-price="31600"
+                        data-mileage="310"
+                        data-goodsdc="0"
+                        data-memberdc="0"
+                        data-coupondc="0"
+                        data-possible="y"
+                        data-goods-key="0"
+                        data-goods-no="1000016025"
+                        data-goods-nm="패션후르츠 샤베트 300ml (50ml x 6ea)_겨울에도 식을줄 모르는 디저트샤벳"
+                        data-option-nm=""
+                        data-fixed-sales="option"
+                        data-sales-unit="1"
+                        data-fixed-order-cnt="option"
+                        data-min-order-cnt="1"
+                        data-max-order-cnt="0"
+                        data-default-goods-cnt="4"
+                        data-f-firstsample="n"
+                        class="foo_firstSampleCheck"
+                      />
+                      <label for="cartSno1_4556515" class="check_s on"></label>
+                    </div>
+                  </td>
                   <td class="td_left">
                     <input type="hidden" name="cartSno[]" value="4550128" />
                     <input
@@ -112,30 +128,31 @@
                       title="x배너 포함 주문시 쿠폰 사용여부 체크하기 위한 goodsNo"
                     />
                     <div class="pick_add_cont">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/skin/front/moment/img/common/layer/btn_layer_close.png"
+                        class="cart_delete"
+                        data-cart-sno="4556515"
+                      />
+
                       <span class="pick_add_img">
-                        <a href="../goods/goods_view.php?goodsNo=1000004896"
+                        <a href="../goods/goods_view.php?goodsNo=1000016025"
                           ><img
-                            src="https://godomall.speedycdn.net/ec5d2a1c8483712efb957784c858b320/goods/1000004896/image/list/1000004896_list_010.jpg"
+                            src="https://godomall.speedycdn.net/ec5d2a1c8483712efb957784c858b320/goods/1000016025/image/list/1000016025_list_027.jpg"
                             width="40"
-                            alt="치즈롤까스(25cm) 1kg (250g*4ea)"
-                            title="치즈롤까스(25cm) 1kg (250g*4ea)"
+                            alt="패션후르츠 샤베트 300ml (50ml x 6ea)_겨울에도 식을줄 모르는 디저트샤벳"
+                            title="패션후르츠 샤베트 300ml (50ml x 6ea)_겨울에도 식을줄 모르는 디저트샤벳"
                             class="middle"
                         /></a>
                       </span>
                       <div class="pick_add_info">
                         <em>
-                          <a
-                            href="../goods/goods_view.php?goodsNo=1000004896"
-                            class="100won_chk"
-                            >치즈롤까스(25cm) 1kg (250g*4ea)</a
+                          <a href="../goods/goods_view.php?goodsNo=1000016025"
+                            >패션후르츠 샤베트 300ml (50ml x 6ea)_겨울에도
+                            식을줄 모르는 디저트샤벳</a
                           >
                         </em>
 
                         <!-- //icon_pick_list -->
-
-                        <div class="pick_option_box"></div>
-
-                        <div class="pick_option_box"></div>
                       </div>
                     </div>
                     <!-- //pick_add_cont -->
@@ -168,9 +185,6 @@
                             >0</span
                           >
                         </span>
-                        <span class="cart_go" data-cart-sno="4556515"
-                          >수량변경</span
-                        >
                       </div>
                     </div>
                   </td>
@@ -194,13 +208,13 @@
                   <td>
                     <strong class="order_sum_txt">15,840원</strong>
                   </td>
-                  <td class="td_delivery" rowspan="1">
+                  <!-- <td class="td_delivery" rowspan="1">
                     기본배송비<br />
                     4,000원
 
                     <br />
                     (택배)
-                  </td>
+                  </td> -->
                 </tr>
               </tbody>
             </table>
@@ -268,6 +282,28 @@
 
               <!-- //price_sum_cont -->
             </div>
+          </div>
+
+          <div class="order_btn_group">
+            <button
+              type="button"
+              class="btn_order_choice_buy"
+              onclick="gd_cart_process('orderSelect');"
+            >
+              선택 상품 주문
+            </button>
+            <button
+              type="button"
+              class="btn_order_whole_buy"
+              onclick="gd_order_all();"
+            >
+              전체 상품 주문
+            </button>
+            <em class="chk_none"
+              ><img
+                src="https://thenaum.cdn-nhncommerce.com/data/skin/front/moment/img/icon/etc/icon_warning_new.png"
+              />주문서 작성단계에서 할인/적립금 적용을 하실 수 있습니다.</em
+            >
           </div>
         </div>
       </div>

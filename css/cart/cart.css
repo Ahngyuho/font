@@ -50,7 +50,7 @@ var {
 }
 
 .order_wrap .order_tit .page_on {
-  color: #00a7b3;
+  color: #ff7400;
   font-weight: bold;
 }
 .order_wrap .order_tit ol li {
@@ -76,10 +76,68 @@ var {
   border-bottom: 1px solid #dbdbdb;
 }
 
+.n_order_table_type table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.td_left {
+  text-align: left !important;
+}
+
+.n_order_table_type table th {
+  background: #f7f7f7;
+  border-top: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  height: 40px;
+  line-height: 40px;
+}
+
+.n_order_table_type table tbody td {
+  padding: 10px 0;
+  height: 76px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  position: relative;
+  border-right: 1px solid #ccc;
+  text-align: center;
+}
+
+.n_order_table_type .pick_add_cont .cart_delete {
+  position: absolute;
+  right: 15px;
+  width: 10px;
+  cursor: pointer;
+}
+
+.n_order_table_type .pick_add_cont .pick_add_img {
+  display: table-cell;
+  width: 38px;
+  padding: 0 15px 0 0;
+  vertical-align: top;
+}
+
+.n_order_table_type .pick_add_cont .pick_add_info {
+  display: table-cell;
+  padding: 0;
+  text-align: left;
+  vertical-align: top;
+}
+
 .td_order_amount {
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+}
+
+.order_goods_num {
+  margin-right: 10%;
+  margin-left: 10%;
   display: flex; /* Flexbox 활성화 */
   justify-content: center; /* 수평 중앙 정렬 */
   align-items: center; /* 수직 중앙 정렬 */
+  height: 100%; /* 부모 높이에 맞춤 */
 }
 
 .count_box button.minus {
@@ -166,4 +224,50 @@ var {
   border: 1px solid #dddddd;
   text-align: center;
   line-height: 28px;
+}
+
+/* 상품 주문 버튼 */
+
+.order_btn_group {
+  margin: 36px auto;
+  text-align: center;
+}
+
+.order_btn_group .btn_order_choice_buy {
+  min-width: 190px;
+  height: 50px;
+  padding: 0 55px 0 55px;
+  color: #ff7400;
+  font-weight: 400;
+  font-size: 18px;
+  border: 1px solid #ff7400;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 5px 0 0;
+}
+
+.order_btn_group .btn_order_whole_buy {
+  height: 50px;
+  padding: 0 55px 0 55px;
+  color: #ffffff;
+  font-size: 18px;
+  border: 1px solid #ff7400;
+  background: #ff7400;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.order_btn_group .chk_none {
+  display: block;
+  min-height: 17px;
+  line-height: 17px;
+  margin: 10px 0 0 0;
+  padding: 5px 0 5px 19px;
+  color: #333333;
+  font-weight: normal;
+  background: none;
+}
+
+.order_btn_group .chk_none img {
+  margin-right: 5px;
 }
