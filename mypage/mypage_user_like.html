@@ -1,208 +1,421 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css" />
-    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet">
+    <link href="../css/mypage/mypage_all_sidebar.css" rel="stylesheet" />
+    <link href="../css/mypage/mypage_userPlus.css" rel="stylesheet" />
+    <link href="../css/mypage/mypage_products_review.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/layout.css" />
     <script src="/js/layout.js"></script>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-        }
+      /* ============================================================*/
+      .user_plus {
+        display: flex;
+      }
+      .user_money {
+        width: 300px;
+        height: 176px;
+      }
+      .user_info {
+        display: flex;
+        width: 43.75rem;
+        height: 140px;
+        padding: 18px 0px 18px 18px;
+        border-radius: 0.625rem;
+        background-color: #fafafa;
+      }
+      .info01 {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+      }
+      .info_name {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .info_type {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        font-size: 20px;
+      }
+      .change_buttonDiv {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 50px;
+      }
+      .change_button {
+        font-size: 18px;
+        padding: 0 12px;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+      }
+      .info02 {
+        width: 50%;
+        height: 100%;
+      }
+      .info_ul {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+      .info_ul li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        gap: 10px;
+      }
 
-        .content {
-            display: flex;
-            padding: 0 !important;
-            position: relative;
-            margin: 0 auto;
-            width: 100%;
-            height: 100%;
-            min-height: 70vh;
-            line-height: 1.6;
-        }
+      .info_ul li:first-child {
+        border-left: 0.0625rem solid #cecece;
+        border-right: 0.0625rem solid #cecece;
+      }
 
-        .like_stores {
-            display: flex;
-            flex-direction: column;
-            border-left: 1px solid #cecece;
-            width: 100%;
-        }
+      .li_line01 {
+        font-size: 20px;
+      }
 
-        .list {
-            display: flex;
-            gap: 20px;
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            width: 80%;
-            height: 30%;
-            margin-left: 5%;
-            margin-top: 3%;
-            background-color: #faf6f6;
-            border-radius: 4px;
-        }
+      .li_line02 {
+        font-size: 20px;
+      }
+      /* ============================================================*/
+      .like_container {
+        width: 100%;
+      }
 
-        .list:last-child {
-            border-bottom: none;
-        }
+      .like_header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 80px;
+        margin-bottom: 20px;
+      }
 
-        .list .img_box {
-            flex-shrink: 0;
-            border-radius: 8px;
-            width: 15%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+      .like_table {
+        width: 100%;
+        border-collapse: collapse;
+      }
 
-        .list .img_box img {
-            width: 100%;
-            /* 이미지가 박스를 완전히 채우도록 */
-            height: 100%;
-            /* 박스 크기에 맞추어 조정 */
-            object-fit: cover;
-            /* 이미지 비율 유지하며 박스 채우기 */
+      .like_table th,
+      .like_table td {
+        border-top: 0.0625rem solid #cecece;
+        border-bottom: 0.0625rem solid #cecece;
+        padding: 30px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      table tr:first-child th {
+        padding: 10px;
+      }
 
-        }
+      .col1 {
+        width: 20%;
+      }
+      .col1 {
+        width: 30%;
+      }
+      .col1 {
+        width: 30%;
+      }
+      .col4 {
+        width: 20%;
+      }
+      .like_table th {
+        font-weight: bold;
+      }
 
-        .list .info_box {
-            display: flex;
-            flex-direction: column;
-            width: 60%;
-            height: 90%;
-            /* 세로 정렬 */
-            gap: 5px;
-            /* 자식 요소 간 간격 */
-        }
+      .likeStore_info {
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
 
+      .likeStore_info img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-right: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
 
-        .list .info_box .store_name {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            flex: 3;
-            /* 진한 텍스트 색상 */
-        }
+      .likeStore_name {
+        font-weight: bold;
+        font-size: 20px;
+      }
 
-        /* subtitle 스타일 */
-        .list .info_box .subtitle {
-            font-size: 14px;
-            color: #666;
-            flex: 2;
-            /* 연한 텍스트 색상 */
-        }
+      .likeStore_buttons button {
+        padding: 5px 10px;
+        margin: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid #ff7400;
+        background-color: #ff7400;
+        color: #fff;
+        border-radius: 4px;
+      }
 
-        .list .info_box .review_and_category {
-            display: flex;
-            flex: 2;
-        }
+      .likeStore_buttons button.delete {
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
 
-        /* review_box 스타일 */
-        .list .info_box .review_and_category .review_box {
-            display: flex;
-            gap: 5px;
-        }
+      .likeStore_buttons button:hover {
+        opacity: 0.8;
+      }
+      .address {
+        font-size: 18px;
+      }
 
-        /* review_box 아이콘 스타일 */
-        .list .info_box .review_and_category .review_box .icon {
-            width: 16px;
-            /* 아이콘 가로 크기 */
-            height: 16px;
-            /* 아이콘 세로 크기 */
-        }
-
-        /* review_content_box 스타일 */
-        .list .info_box .review_and_category .review_box .review_content_box span:first-child {
-            font-size: 16px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .list .info_box .review_and_category .review_box .review_content_box .subtitle {
-            font-size: 14px;
-            color: #666;
-        }
+      .phone {
+        color: #28a745;
+        font-weight: bold;
+        font-size: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header id="header"></header>
-
-
-    <div class="content">
+    <div class="container">
+      <div class="main all_content">
         <client_sidebar id="client_sidebar"></client_sidebar>
-        <div class="like_stores">
-            <div class="list">
-                <a href="/store/store_detail.html" target="_blank" class="img_box">
-                    <img
-                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-                </a>
-                <div class="info_box">
-                    <div class="store_name">장뜰떡볶이</div>
-                    <div class="review_and_category">
-                        <div class="review_box">
-                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                            <div class="review_content_box">
-                                <span>4.9</span>
-                                <span class="subtitle">(38)</span>
-                            </div>
-                        </div>
-                        <div class="subtitle">떡볶이</div>
-                    </div>
-                    <div class="subtitle">서울 동작구</div>
+        <div class="content">
+          <div class="user_plus">
+            <div class="user_info">
+              <div class="info01">
+                <div class="info_name">오승재님은</div>
+                <div class="info_type">일반회원 입니다</div>
+                <div class="change_buttonDiv">
+                  <button class="change_button">계정 타입 전환</button>
                 </div>
+              </div>
+              <div class="info02">
+                <ul class="info_ul">
+                  <li>
+                    <div class="li_line01">좋아요 한 식당</div>
+                    <div class="li_line02">5개</div>
+                  </li>
+                  <li>
+                    <div class="li_line01">뭘로 넣을까</div>
+                    <div class="li_line02">2건</div>
+                  </li>
+                </ul>
+              </div>
             </div>
-
-            <div class="list">
-                <a href="/store/store_detail.html" target="_blank" class="img_box">
-                    <img
-                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-                </a>
-                <div class="info_box">
-                    <div class="store_name">장뜰떡볶이</div>
-                    <div class="review_and_category">
-                        <div class="review_box">
-                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                            <div class="review_content_box">
-                                <span>4.9</span>
-                                <span class="subtitle">(38)</span>
-                            </div>
-                        </div>
-                        <div class="subtitle">떡볶이</div>
+            <div class="user_money"></div>
+          </div>
+          <div class="like_container">
+            <div class="like_header">좋아요 한 식당</div>
+            <table class="like_table">
+              <thead>
+                <tr>
+                  <th class="col1">식당 이름</th>
+                  <th class="col2">주소</th>
+                  <th class="col3">전화번호</th>
+                  <th class="col4">예약하기 / 삭제하기</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">장뜰 떡볶이</div>
+                      </div>
                     </div>
-                    <div class="subtitle">서울 동작구</div>
-                </div>
-            </div>
-
-            <div class="list">
-                <a href="/store/store_detail.html" target="_blank" class="img_box">
-                    <img
-                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg" />
-                </a>
-                <div class="info_box">
-                    <div class="store_name">장뜰떡볶이</div>
-                    <div class="review_and_category">
-                        <div class="review_box">
-                            <img src="/icons/star_fill.svg" alt="star" class="icon" />
-                            <div class="review_content_box">
-                                <span>4.9</span>
-                                <span class="subtitle">(38)</span>
-                            </div>
-                        </div>
-                        <div class="subtitle">떡볶이</div>
+                  </td>
+                  <td class="address">
+                    서울 동작구 여의대방로 112 농심신대방동사옥
+                  </td>
+                  <td><span class="phone">02-861-2389</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
                     </div>
-                    <div class="subtitle">서울 동작구</div>
-                </div>
-            </div>
-
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="likeStore_info">
+                      <img
+                        src="https://thenaum.cdn-nhncommerce.com/data/goods/15/01/26/1000000463/1000000463_magnify_07.jpg"
+                      />
+                      <div>
+                        <div class="likeStore_name">BBQ 치킨</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="address">서울 관악구 신림동 1426-10</td>
+                  <td><span class="phone">031-268-1657</span></td>
+                  <td class="likeStore_buttons">
+                    <button>예약하기</button>
+                    <button class="delete">삭제하기</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </div>
-
-
     <footer id="footer"></footer>
-</body>
-
+  </body>
 </html>
